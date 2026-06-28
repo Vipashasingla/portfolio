@@ -131,7 +131,7 @@
       <h2>One component, six products.</h2>
       <p>The data-grid is a <strong>shared UI component</strong> — the table that six SPM products render their data in:</p>
       <div class="teams">
-        <span>Financials</span><span>Goals</span><span>Portfolio Planning</span><span>CWM</span><span>EAP</span><span>Resource Management</span>
+        <span>CWM</span><span>EAP</span><span>Financials</span><span>Goals</span><span>Portfolio Planning</span><span>Resource Management</span>
       </div>
       <p>That shared nature changes the economics of every decision. Build a capability once and all six products get it instantly. Ship a regression once and all six inherit it. So the right question is never "does this one team want it?" — it's <strong>"how far does this multiply, and what does it cost everyone downstream?"</strong> That lens is what this case study is about.</p>
     </section>
@@ -184,12 +184,16 @@
 
       <div class="decision">
         <div class="tag">Bet 02 · P1 · multiple consumers</div>
-        <h3>Row highlight — fixing the most-used interaction.</h3>
-        <div class="row"><span class="lbl">The signal</span><p>Multiple defects from consuming teams reported the same thing: when a row's link opened the side panel, users lost track of <em>which</em> row they'd selected. A repeated, cross-team complaint — not a hypothesis.</p></div>
-        <div class="row"><span class="lbl">Frequency</span><p>It sits in the most-used interaction — click a row → open its record → act. Every session, every user.</p></div>
-        <div class="row"><span class="lbl">Quality adjacency</span><p>A highlight distinct from hover and full-selection also lowers the risk of editing the wrong record. Quality work in the shape of a feature.</p></div>
-        <div class="row"><span class="lbl">Semantic reach</span><p>Color-by-row also lets consumers encode meaning — parent vs. child vs. aggregate — in the hierarchical grids the suite relies on.</p></div>
-        <div class="row verdict"><span class="lbl">Verdict</span><p>A usability defect in the most-used interaction, raised by multiple consumers → outranks scattered cosmetic bugs.</p></div>
+        <h3>Row highlight — two upgrades to the most-used interaction.</h3>
+        <div class="row"><span class="lbl">The interaction</span><p>The most-used loop in any grid is the same: scan a row → open its record → act. Anything that makes that loop clearer or more personal compounds — every user, every session. Two things shipped here.</p></div>
+        <div class="row"><span class="lbl">Shipped · keep your place</span><p>A stronger highlight for the last-interacted record. Open a row's record in the side panel and the row you came from stays clearly marked — so you never lose your place moving between the list and the detail, and you're far less likely to act on the wrong record.</p></div>
+        <div class="row"><span class="lbl">Shipped · the bigger one</span><p>Let users highlight rows themselves, in colors from the theme palette. Now people can mark rows by their <em>own</em> meaning — flag, group, track — so the grid becomes something they organize at a glance instead of a fixed table they only read. This is the more impactful of the two: it turns a passive scan into an interaction the user controls.</p></div>
+        <div class="row verdict"><span class="lbl">Verdict</span><p>Both ship once and land in every consumer's grid — a small surface for an outsized payoff. The user-controlled coloring especially adds everyday value people keep coming back to.</p></div>
+      </div>
+
+      <div class="compare">
+        <div class="shot"><img src="../assets/grid-row-highlight.png" alt="Grid rows highlighted in user-chosen theme colors, with the interacted row marked" /><span class="cap2">Row highlighting in use</span></div>
+        <p class="figcap">Both upgrades, live: rows marked in <strong>user-chosen theme colors</strong> to flag what matters, plus a clear highlight on the <strong>row you're interacting with</strong> — so your place is never lost.</p>
       </div>
 
       <div class="decision">
