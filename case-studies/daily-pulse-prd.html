@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CWM Daily Pulse — PRD</title>
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#F8F9FC;--ink2:#FFF;--ink3:#EEF0F6;--ln:#DDE1EC;
+  --ac:#2563EB;--acd:#1D4ED8;--em:#10B981;--am:#D97706;--rd:#EF4444;--pr:#7C3AED;
+  --mt:#4B5563;--md:#9CA3AF;--pp:#111827;
+  --se:'Fraunces',Georgia,serif;--sa:'Inter',system-ui,sans-serif;--mo:'Space Mono',monospace;
+  --mx:900px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--mt);font:400 16px/1.65 var(--sa);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--ac);color:#fff}
+.w{max-width:var(--mx);margin:0 auto;padding:0 28px}
+
+/* top links */
+.pill{position:fixed;top:18px;left:18px;z-index:9999;display:inline-flex;align-items:center;gap:7px;font-family:var(--mo);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#16141A;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.12);border-radius:999px;padding:9px 14px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 4px 14px -8px rgba(0,0,0,.3)}
+
+/* doc header */
+.dochead{padding:104px 0 30px}
+.ey{font:400 12px/1 var(--mo);letter-spacing:.28em;text-transform:uppercase;color:var(--ac);display:inline-flex;align-items:center;gap:14px}
+.ey::before{content:"";width:34px;height:1px;background:var(--ac);opacity:.6}
+h1{font-family:var(--se);color:var(--pp);font-weight:400;font-size:clamp(38px,6vw,62px);letter-spacing:-.02em;line-height:1.02;margin:22px 0 20px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 10px;font-family:var(--mo);font-size:11px;letter-spacing:.04em;color:var(--md);text-transform:uppercase}
+.meta span{background:var(--ink3);border:1px solid var(--ln);border-radius:999px;padding:6px 12px}
+.meta b{color:var(--pp);font-weight:700}
+.tocs{margin-top:22px;font-size:13px;color:var(--md)}
+.tocs a{color:var(--ac);text-decoration:none}.tocs a:hover{text-decoration:underline}
+
+/* sections */
+section{padding:30px 0;border-top:1px solid var(--ln)}
+h2{font-family:var(--se);color:var(--pp);font-weight:500;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.015em;line-height:1.1;margin-bottom:6px}
+.kick{font-family:var(--mo);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--md);margin-bottom:10px}
+h3{font-family:var(--se);color:var(--pp);font-weight:500;font-size:20px;margin:26px 0 12px}
+p{margin:14px 0;color:var(--mt)}
+p strong,li strong,td strong{color:var(--pp);font-weight:600}
+em{font-style:italic;color:var(--acd)}
+ul,ol{margin:14px 0 14px 22px}li{margin:8px 0}
+
+/* callouts */
+.call{border-left:3px solid var(--ac);background:var(--ink2);border-radius:0 8px 8px 0;padding:16px 20px;margin:18px 0;font-size:15px}
+.call.cost{border-left-color:var(--am)}
+.call .lbl{font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);display:block;margin-bottom:8px}
+.call.cost .lbl{color:var(--am)}
+
+/* tables */
+.tw{overflow-x:auto;margin:18px 0;border:1px solid var(--ln);border-radius:10px;background:var(--ink2)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{text-align:left;padding:12px 15px;border-bottom:1px solid var(--ln);vertical-align:top;line-height:1.5}
+th{font-family:var(--mo);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--md);background:var(--ink3);font-weight:700}
+tr:last-child td{border-bottom:none}
+td:first-child{color:var(--pp);font-weight:500}
+.idc{font-family:var(--mo);font-size:12px;color:var(--acd);white-space:nowrap}
+
+/* priority badges */
+.p{font-family:var(--mo);font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:999px;white-space:nowrap;display:inline-block}
+.p0{background:#FEE2E2;color:#B91C1C}
+.p1{background:#FEF3C7;color:#B45309}
+.p2{background:#EDE9FE;color:#6D28D9}
+
+.endcap{padding:48px 0 90px;border-top:1px solid var(--ln);text-align:center}
+.endcap a{font-family:var(--mo);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);text-decoration:none;border:1px solid var(--ac);border-radius:999px;padding:11px 20px}
+.endcap a:hover{background:var(--ac);color:#fff}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="pill" href="daily-pulse.html">← Case study</a>
+
+<div class="w">
+
+  <header class="dochead">
+    <span class="ey">Product Requirements Document</span>
+    <h1>CWM Daily Pulse</h1>
+    <div class="meta">
+      <span><b>Author</b> Vipasha Singla</span>
+      <span><b>Updated</b> June 2026</span>
+      <span><b>Status</b> Draft</span>
+      <span><b>Version</b> 2.0</span>
+    </div>
+    <p class="tocs">Jump to:
+      <a href="#problem">Problem</a> ·
+      <a href="#users">Who it's for</a> ·
+      <a href="#solution">Solution</a> ·
+      <a href="#scope">Scope</a> ·
+      <a href="#oos">Not in scope</a> ·
+      <a href="#nfr">Non-functional</a> ·
+      <a href="#journey">User journey</a> ·
+      <a href="#metrics">Metrics</a> ·
+      <a href="#deps">Dependencies</a> ·
+      <a href="#risks">Risks</a> ·
+      <a href="#oq">Open questions</a>
+    </p>
+  </header>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="kick">01 — Problem</div>
+    <h2>The unique advantage is invisible.</h2>
+    <p>CWM sits on the same platform as ITSM, HR, PPM, and EAP — the same database, same identity model, same infrastructure. No external work tool has that access. But CWM doesn't use it.</p>
+    <p>Today, SPM users start every morning by hopping between siloed ServiceNow modules that don't talk to each other:</p>
+    <div class="tw"><table>
+      <thead><tr><th>Where they go</th><th>What they check</th><th>What's missing</th></tr></thead>
+      <tbody>
+        <tr><td>Email / Slack</td><td>Overnight escalations, messages, FYIs</td><td>No priority. No connection to sprint status.</td></tr>
+        <tr><td>EAP</td><td>Sprint board — stories in progress, blocked items</td><td>Doesn't show ITSM incidents or PPM approvals affecting the sprint.</td></tr>
+        <tr><td>ITSM module</td><td>Open incidents assigned to them</td><td>No link to sprint context or team impact.</td></tr>
+        <tr><td>PPM module</td><td>Pending approvals</td><td>No visibility into which tasks are blocked waiting on these approvals.</td></tr>
+        <tr><td>CWM</td><td>Optional. Nothing triggers them to come here first.</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <p>All of this data lives in the same platform, the same database. But the user experiences it as five separate apps. CWM could unify this — but today it's just another stop, not the starting point.</p>
+    <div class="call"><span class="lbl">The invisible advantage</span>Connected Work can already pull from any ServiceNow table — a structural advantage no outside tool can replicate. But today it shows up as rows in a board column, not as intelligence. The thing that makes CWM different from Asana or Monday.com is the thing CWM doesn't surface.</div>
+    <div class="call cost"><span class="lbl">Cost</span>20+ minutes daily reconstructing context the platform already has.</div>
+  </section>
+
+  <!-- USERS -->
+  <section id="users">
+    <div class="kick">02 — Who this is for</div>
+    <h2>Four personas, one morning question.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Persona</th><th>Their morning question</th><th>What Daily Pulse tells them</th></tr></thead>
+      <tbody>
+        <tr><td>IC / Developer</td><td>"What should I work on first?"</td><td>"Top 3 today: item A unblocks 2 teammates, item B's dependency resolved at 11pm, item C is 3x over cycle time."</td></tr>
+        <tr><td>Scrum Master</td><td>"Is my sprint healthy?"</td><td>"Sprint at 120% of avg velocity. Descope these 2 items — no downstream dependencies."</td></tr>
+        <tr><td>Program Manager</td><td>"Which team is at risk?"</td><td>"Team B blocked by ITSM incident owned by Team A. Escalate before it cascades to Team C."</td></tr>
+        <tr><td>Knowledge Worker</td><td>"What changed since yesterday?"</td><td>"Contract review approved at 9pm. Marketing brief can now move to design."</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div class="kick">03 — Solution</div>
+    <h2>An AI morning briefing that reasons across every system.</h2>
+    <p><strong>Daily Pulse</strong> is an AI-generated morning briefing in CWM's My Space that reasons across every system on the Now Platform. It answers three questions, every morning:</p>
+    <h3>1. What matters right now</h3>
+    <p>An AI-ranked priority list with cross-system reasoning. Not "your 12 assigned items" but "these 3 matter most — here's why." Item A unblocks 2 people. Item B's dependency resolved overnight. Item C is 3x over cycle time.</p>
+    <h3>2. What changed that affects your plan</h3>
+    <p>An overnight diff across all boards and connected records. Not "15 items moved state" but "the blocking incident was resolved at 11pm — you can pull the API story into sprint before standup." Cross-system cause and effect.</p>
+    <h3>3. What's at risk before it's too late</h3>
+    <p>Predictions, not reports. "Sprint at 120% of average velocity. Team B has an unresolved dependency from Team A. This item stuck 3x normal cycle time." Early warning, not a post-mortem.</p>
+    <p>Every insight links directly to the relevant board and item. Read → tap → act.</p>
+    <div class="call"><span class="lbl">Two surfaces, one workspace</span>My Space hosts the Daily Pulse — it's why you open CWM (orientation). Team Boards are where work gets done (execution). The Pulse connects both — every insight deep-links to the board and item that needs attention.</div>
+  </section>
+
+  <!-- SCOPE -->
+  <section id="scope">
+    <div class="kick">04 — What's in scope</div>
+    <h2>Phased delivery.</h2>
+
+    <h3>Phase 1 — Board-level intelligence</h3>
+    <div class="tw"><table>
+      <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="idc">FR-1</td><td>AI-ranked priority list using cross-system signals: due date, blocker status, dependency count, cycle time deviation</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-2</td><td>Overnight diff — state changes, comments, reassignments, due-date changes since the user's last session across all boards and connected records</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-3</td><td>Sprint-at-a-glance widget — committed vs completed points, velocity trend (last 6 sprints), top 3 focus items</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-4</td><td>Tap-to-navigate — each Pulse insight deep-links to the relevant board + item</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-5</td><td>Time-series snapshot model — daily scheduled job capturing sprint state for burndown and velocity</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-6</td><td>Burndown chart — actual vs ideal line, scope-change line, derived from snapshot data</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-7</td><td>Velocity trend — rolling 6-sprint average with direction indicator</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-8</td><td>Daily push notification — "X items need attention, Y blockers overnight" — one tap opens My Space</td><td><span class="p p1">P1</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Phase 2 — Cross-system reasoning</h3>
+    <div class="tw"><table>
+      <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="idc">FR-9</td><td>ITSM → sprint impact detection — surface a risk alert when a connected incident blocks a sprint story</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-10</td><td>PPM approval → task unblock — notify when a dependent approval completes so the blocked task can proceed</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-11</td><td>Dependency cascade alerts — when a cross-board dependency is blocked, surface the downstream impact chain</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-12</td><td>Sprint overload prediction — alert when committed points exceed 110% of historical velocity</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-13</td><td>Role-aware views — IC sees task priorities, SM sees sprint health, PM sees cross-team risk</td><td><span class="p p1">P1</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Phase 3 — Agents and autonomy</h3>
+    <div class="tw"><table>
+      <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="idc">FR-14</td><td>Stale-item agent — auto-flag items with no update in 3+ days (configurable)</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-15</td><td>Descope recommendation — when a sprint is overloaded, suggest items to defer based on priority + dependency awareness</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-16</td><td>Semantic search — natural-language queries across CWM tasks, docs, and comments</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-17</td><td>AI status generation — auto-generate a sprint/board status update from current data</td><td><span class="p p2">P2</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- OUT OF SCOPE -->
+  <section id="oos">
+    <div class="kick">05 — What's NOT in scope</div>
+    <h2>Deliberately deferred.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Item</th><th>Why not now</th></tr></thead>
+      <tbody>
+        <tr><td>Customizable Pulse layout / widget rearrangement</td><td>Users can't configure which insights appear or reorder the briefing. Ship the default experience first, validate what users engage with, then add personalization based on usage data.</td></tr>
+        <tr><td>Historical Pulse archive ("what did my briefing say last Tuesday?")</td><td>Useful for retrospectives, but adds storage complexity. Defer until the daily-usage habit is established.</td></tr>
+        <tr><td>Team-level Pulse (aggregated briefing for a manager across reports)</td><td>High value for PMs and directors, but requires role-hierarchy resolution and cross-board aggregation at scale. A Phase 2 dependency — build the individual Pulse first.</td></tr>
+        <tr><td>Slack / Teams delivery of the Pulse</td><td>Users will want the briefing in their messaging tool, not just inside CWM. Defer until the in-app experience proves value — pushing to Slack before the content is trusted risks low engagement and a hard-to-recover first impression.</td></tr>
+        <tr><td>Natural-language "ask the Pulse" (conversational sprint queries)</td><td>Compelling but expensive — requires real-time LLM inference per query. Ship the pre-computed daily briefing first; frequent ad-hoc questions would validate the investment.</td></tr>
+        <tr><td>Custom alert thresholds (e.g. alert only above 130%, not 110%)</td><td>Configurability adds complexity before we know what thresholds work. Ship with sensible defaults, learn from accept/dismiss patterns, then open configuration.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- NFR -->
+  <section id="nfr">
+    <div class="kick">06 — Non-functional requirements</div>
+    <h2>Targets.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Requirement</th><th>Target</th></tr></thead>
+      <tbody>
+        <tr><td>Daily Pulse load time</td><td>&lt; 3 seconds on first open</td></tr>
+        <tr><td>Overnight diff computation</td><td>Complete within 30 minutes for all active users</td></tr>
+        <tr><td>AI ranking latency</td><td>&lt; 5 seconds for up to 50 items</td></tr>
+        <tr><td>Snapshot storage</td><td>12 months retention per sprint</td></tr>
+        <tr><td>Connected Work scale</td><td>Up to 500 connected items per board</td></tr>
+        <tr><td>Multi-LLM support</td><td>Now LLM, Azure OpenAI, Amazon Bedrock, GCP Vertex</td></tr>
+        <tr><td>Feature gating</td><td>Three levels: plugin active → skill enabled → user role assigned</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey">
+    <div class="kick">07 — User journey</div>
+    <h2>Scrum master, Tuesday morning.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Step</th><th>What happens</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Open CWM → My Space loads with Daily Pulse</td><td class="idc">0s</td></tr>
+        <tr><td>2</td><td>See briefing: "3 items need attention. Sprint at 110% capacity. 1 blocker overnight."</td><td class="idc">5s</td></tr>
+        <tr><td>3</td><td>Read top insight: "API migration at risk — ITSM incident #4021 unresolved, sprint ends Thursday."</td><td class="idc">15s</td></tr>
+        <tr><td>4</td><td>Tap insight → board opens with that story highlighted, incident link inline</td><td class="idc">20s</td></tr>
+        <tr><td>5</td><td>Reassign to on-call engineer. Add comment. Flag for standup.</td><td class="idc">60s</td></tr>
+        <tr><td>6</td><td>Done. Cross-system risk identified and resolved — without opening email, Slack, or ITSM separately.</td><td class="idc">90s</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call cost"><span class="lbl">Today</span>This same flow takes 20+ minutes across 5 siloed modules.</div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="metrics">
+    <div class="kick">08 — Success metrics</div>
+    <h2>North star: % of SPM users whose first app open of the day is CWM.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Category</th><th>Metric</th><th>Target</th></tr></thead>
+      <tbody>
+        <tr><td>Daily habit</td><td>Morning open rate</td><td>% of WAU opening CWM in the first hour of the workday</td></tr>
+        <tr><td>Daily habit</td><td>Pulse → board navigation</td><td>% of Pulse viewers navigating to a board within 5 min</td></tr>
+        <tr><td>Retention</td><td>Week-4 retention</td><td>&gt; 40% of activated users still active at day 28</td></tr>
+        <tr><td>Intelligence</td><td>Insight accuracy</td><td>&gt; 70% of risk predictions confirmed by sprint outcome</td></tr>
+        <tr><td>Intelligence</td><td>Insight action rate</td><td>% of AI insights leading to user action (descope, reassign, escalate)</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- DEPENDENCIES -->
+  <section id="deps">
+    <div class="kick">09 — Dependencies</div>
+    <h2>What this is built on.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Dependency</th><th>Owner</th><th>Impact if delayed</th></tr></thead>
+      <tbody>
+        <tr><td>Now Assist event-triggered skill support</td><td>Platform AI team</td><td>Blocks autonomous agents (P2–P3). Workaround: scheduled batch execution.</td></tr>
+        <tr><td>Time-series snapshot table + scheduled job</td><td>CWM Agile plugin team</td><td>Blocks burndown, velocity, all trend metrics (P1). No workaround — this is the foundation.</td></tr>
+        <tr><td>Connected Work performance at 500+ items</td><td>CWM Core team</td><td>Blocks enterprise adoption. The current default of 100 is too restrictive for cross-board aggregation.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- RISKS -->
+  <section id="risks">
+    <div class="kick">10 — Risks</div>
+    <h2>What could go wrong.</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Risk</th><th>Likelihood</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>AI ranking quality is poor — users ignore the Pulse</td><td>Medium</td><td>Ship with an accept/dismiss feedback loop. Measure accept rate weekly. Iterate before scaling.</td></tr>
+        <tr><td>Cross-system reasoning produces false positives (alert fatigue)</td><td>Medium</td><td>Start with high-confidence signals only (blocked, overdue). Expand gradually based on accuracy.</td></tr>
+        <tr><td>SPM users don't see a reason to open CWM over module-hopping</td><td>High</td><td>The daily push notification creates the entry point. The Pulse shows cross-system value no individual module provides.</td></tr>
+        <tr><td>Engineering capacity split across 3 plugins</td><td>Medium</td><td>P1 focuses on CWM Core + Agile. AI skills follow once the foundation is stable.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- OPEN QUESTIONS -->
+  <section id="oq">
+    <div class="kick">11 — Open questions</div>
+    <h2>Still to resolve.</h2>
+    <ol>
+      <li><strong>Ranking approach:</strong> weighted formula (due date × blocker × dependencies × cycle time) or LLM reasoning over full context? A formula is predictable and fast; an LLM is more nuanced but slower and harder to debug.</li>
+      <li><strong>Push notification threshold:</strong> send daily regardless, or only when there are actionable insights? Always-send builds the habit, but empty Pulses erode trust.</li>
+      <li><strong>Cross-system permissions:</strong> if a PM's Pulse surfaces an ITSM incident blocking their sprint, does the PM need ITSM role access to see details — or does the Pulse show a summary without requiring source-table permissions?</li>
+      <li><strong>Scale testing:</strong> the Pulse aggregates across boards. At 2000+ connected items per user, performance is unvalidated. Needs load testing before Phase 2.</li>
+      <li><strong>Competitive moat:</strong> if Atlassian extends its Teamwork Graph to include ServiceNow data via marketplace integrations, the cross-system advantage weakens. Should CWM invest in platform-exclusive data sources (CMDB, financial plans, resource allocations) to maintain differentiation?</li>
+    </ol>
+  </section>
+
+  <div class="endcap"><a href="daily-pulse.html">← Back to the case study</a></div>
+
+</div>
+</body>
+</html>
