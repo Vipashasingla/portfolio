@@ -162,14 +162,12 @@ td:first-child{color:var(--pp);font-weight:500}
     <div class="tw"><table>
       <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
       <tbody>
-        <tr><td class="idc">FR-1</td><td>AI-ranked priority list using cross-system signals: due date, blocker status, dependency count, cycle time deviation</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-2</td><td>Overnight diff — state changes, comments, reassignments, due-date changes since the user's last session across all boards and connected records</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-3</td><td>Sprint-at-a-glance widget — committed vs completed points, velocity trend (last 6 sprints), top 3 focus items</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-4</td><td>Tap-to-navigate — each Pulse insight deep-links to the relevant board + item</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-5</td><td>Time-series snapshot model — daily scheduled job capturing sprint state for burndown and velocity</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-6</td><td>Burndown chart — actual vs ideal line, scope-change line, derived from snapshot data</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-7</td><td>Velocity trend — rolling 6-sprint average with direction indicator</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-8</td><td>Daily push notification — "X items need attention, Y blockers overnight" — one tap opens My Space</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-1</td><td>AI-ranked priority list — ranks the user's items by cross-system signals (due date, blocker status, dependency count, cycle-time deviation) and says why each matters</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-2</td><td>Overnight diff — what changed since the user's last session (state, comments, reassignments, due dates) across all boards and connected records</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-3</td><td>Sprint snapshot — a daily scheduled job capturing sprint state; the data foundation for every trend metric</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-4</td><td>Sprint metrics — committed vs completed points, burndown (actual vs ideal + scope-change line), and rolling 6-sprint velocity, all derived from the snapshot</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-5</td><td>Tap-to-navigate — every insight deep-links to the relevant board and item</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-6</td><td>Daily push notification — "X items need attention, Y blockers overnight"; one tap opens My Space</td><td><span class="p p1">P1</span></td></tr>
       </tbody>
     </table></div>
 
@@ -177,11 +175,9 @@ td:first-child{color:var(--pp);font-weight:500}
     <div class="tw"><table>
       <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
       <tbody>
-        <tr><td class="idc">FR-9</td><td>ITSM → sprint impact detection — surface a risk alert when a connected incident blocks a sprint story</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-10</td><td>PPM approval → task unblock — notify when a dependent approval completes so the blocked task can proceed</td><td><span class="p p1">P1</span></td></tr>
-        <tr><td class="idc">FR-11</td><td>Dependency cascade alerts — when a cross-board dependency is blocked, surface the downstream impact chain</td><td><span class="p p1">P1</span></td></tr>
-        <tr><td class="idc">FR-12</td><td>Sprint overload prediction — alert when committed points exceed 110% of historical velocity</td><td><span class="p p1">P1</span></td></tr>
-        <tr><td class="idc">FR-13</td><td>Role-aware views — IC sees task priorities, SM sees sprint health, PM sees cross-team risk</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-7</td><td>Cross-system impact alerts — surface when a connected record blocks or unblocks a sprint item (an ITSM incident, a pending PPM approval, or a cross-board dependency), with the downstream impact chain</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-8</td><td>Sprint overload prediction — alert when committed points exceed 110% of historical velocity</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-9</td><td>Role-aware views — IC sees task priorities, SM sees sprint health, PM sees cross-team risk</td><td><span class="p p1">P1</span></td></tr>
       </tbody>
     </table></div>
 
@@ -189,10 +185,10 @@ td:first-child{color:var(--pp);font-weight:500}
     <div class="tw"><table>
       <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
       <tbody>
-        <tr><td class="idc">FR-14</td><td>Stale-item agent — auto-flag items with no update in 3+ days (configurable)</td><td><span class="p p2">P2</span></td></tr>
-        <tr><td class="idc">FR-15</td><td>Descope recommendation — when a sprint is overloaded, suggest items to defer based on priority + dependency awareness</td><td><span class="p p2">P2</span></td></tr>
-        <tr><td class="idc">FR-16</td><td>Semantic search — natural-language queries across CWM tasks, docs, and comments</td><td><span class="p p2">P2</span></td></tr>
-        <tr><td class="idc">FR-17</td><td>AI status generation — auto-generate a sprint/board status update from current data</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-10</td><td>Stale-item agent — auto-flag items with no update in 3+ days (configurable)</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-11</td><td>Descope recommendation — when a sprint is overloaded, suggest items to defer, based on priority and dependencies</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-12</td><td>Semantic search — natural-language queries across CWM tasks, docs, and comments</td><td><span class="p p2">P2</span></td></tr>
+        <tr><td class="idc">FR-13</td><td>AI status generation — auto-draft a sprint/board status update from current data</td><td><span class="p p2">P2</span></td></tr>
       </tbody>
     </table></div>
   </section>
