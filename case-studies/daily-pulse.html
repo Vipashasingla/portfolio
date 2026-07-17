@@ -95,7 +95,7 @@ section{padding:clamp(68px,9vw,120px) 0}
 .fp .fps{font-size:12px;color:var(--md);margin-top:8px}
 
 /* roadmap */
-.rg{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rg{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .rc{padding:20px 16px}.rc h3{font-size:14px;margin-bottom:10px}
 .rc .rt{font:700 9px/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:4px;color:#fff;display:inline-block;margin-bottom:4px}
 .rc .rtm{font:400 9px/1 var(--mo);color:var(--md);margin-bottom:10px}
@@ -146,7 +146,7 @@ footer .fm span{color:var(--ac)}
 <div class="w">
   <p class="ey rv">PM Case Study · 2026</p>
   <h1 class="rv" data-d="1">Connecting <i>dots</i><br>no other tool<br>can see.</h1>
-  <p class="hsub rv" data-d="2">CWM sits on the same platform as your IT incidents, HR cases, and project approvals. No other work tool can see all of that. This case study proposes using that advantage to make CWM the first thing every SPM user opens each morning — then expanding from there.</p>
+  <p class="hsub rv" data-d="2">CWM — ServiceNow's work-management tool, its answer to Asana or Monday.com — sits on the same platform as your IT incidents, HR cases, and project approvals. No other work tool can see all of that. This case study proposes making CWM the first thing every SPM (Strategic Portfolio Management) user opens each morning — then expanding from there.</p>
   <div class="hframe rv" data-d="3"><b>My perspective:</b> I spent 2.5 years as a software engineer on CWM — building sprint metrics, data grids, and agile components across four SPM teams. I watched the product grow from launch to 3,085 monthly engaged users. I also watched people not use it as their starting point. This is my proposal for how to change that.</div>
   <div class="hm rv" data-d="4">
     <span>By <b>Vipasha</b></span>
@@ -166,7 +166,20 @@ footer .fm span{color:var(--ac)}
   <h2 class="rv" data-d="1">Collaboration inside the enterprise. That was the aim.</h2>
   <p class="ld rv" data-d="2"><strong>CWM stands for Collaborative Work Management.</strong> It's ServiceNow's product for managing everyday work inside the Now Platform — the same platform that already runs ITSM, HR, customer service, and portfolio management for 85% of the Fortune 500.</p>
   <p class="ld rv" data-d="3" style="margin-top:16px">The original aim: give ServiceNow customers a place where boards, docs, and tasks live together. A simpler, friendlier layer on top of the enterprise. <em>No more switching to Asana or Monday.com for lightweight work. Manage it here — where your enterprise data already lives.</em></p>
-  <p class="ld rv" data-d="3" style="margin-top:16px">CWM shipped fast since January 2024 — boards, docs, kanban, Gantt, sprint planning, 7 AI skills, Connected Work (pull items from any ServiceNow table), bidirectional sync with Enterprise Agile Planning (EAP), formulas, and automations. The collaboration surface is clean and usable. The question is: why would anyone come to it?</p>
+  <p class="ld rv" data-d="3" style="margin-top:16px">Since January 2024 it has shipped at pace, and the collaboration surface is clean and genuinely usable. Build quality was never the problem — adoption is. So here's the question this case study answers: <em>why would anyone open CWM first?</em></p>
+
+  <div class="card rv" data-d="3" style="margin-top:28px">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:14px">The ServiceNow vocabulary, in plain English</div>
+    <dl style="display:grid;grid-template-columns:max-content 1fr;gap:11px 20px;margin:0;font-size:14px;line-height:1.5">
+      <dt style="font-weight:600;color:var(--pp)">CWM</dt><dd style="margin:0;color:var(--mt)">Collaborative Work Management — the product this case study is about. Boards, docs, and tasks, built into ServiceNow.</dd>
+      <dt style="font-weight:600;color:var(--pp)">SPM</dt><dd style="margin:0;color:var(--mt)">Strategic Portfolio Management — the teams that plan and track an enterprise's projects and portfolios. CWM's first audience.</dd>
+      <dt style="font-weight:600;color:var(--pp)">ITSM</dt><dd style="margin:0;color:var(--mt)">IT Service Management — where IT incidents and requests are logged and resolved.</dd>
+      <dt style="font-weight:600;color:var(--pp)">PPM</dt><dd style="margin:0;color:var(--mt)">Project Portfolio Management — project plans, demands, and the approvals that gate them.</dd>
+      <dt style="font-weight:600;color:var(--pp)">EAP</dt><dd style="margin:0;color:var(--mt)">Enterprise Agile Planning — ServiceNow's agile tooling: epics, stories, sprints.</dd>
+      <dt style="font-weight:600;color:var(--pp)">Connected&nbsp;Work</dt><dd style="margin:0;color:var(--mt)">A CWM capability that pulls records from any ServiceNow table onto a board.</dd>
+      <dt style="font-weight:600;color:var(--pp)">Now&nbsp;Platform</dt><dd style="margin:0;color:var(--mt)">The shared ServiceNow platform — one database — that all of the above run on.</dd>
+    </dl>
+  </div>
 </div>
 </section>
 <hr class="hr">
@@ -198,11 +211,16 @@ footer .fm span{color:var(--ac)}
 <section>
 <div class="w">
   <div class="rv"><span class="ey">Act 03 — The problem</span></div>
-  <h2 class="rv" data-d="1">Boards and docs in one place isn't enough.</h2>
-  <p class="ld rv" data-d="2">CWM offers a genuinely simpler collaboration experience than navigating ServiceNow's complex modules directly. But "simpler" doesn't pull people in. People don't switch to a new tool because it's easier. They switch because it does something the old way <em>can't.</em></p>
+  <h2 class="rv" data-d="1">The problem, in two parts.</h2>
+  <p class="ld rv" data-d="2">To do their job, an SPM user needs a picture that spans systems. Two things stand in the way — and the second one is CWM's own doing.</p>
 
-  <h3 class="rv" data-d="2" style="margin-top:30px">1. SPM users already live in ServiceNow — just fragmented.</h3>
-  <p class="ld rv" data-d="2" style="margin-top:8px">An SPM user's morning isn't about choosing between tools. They're already on ServiceNow — but they're hopping between siloed modules that don't talk to each other:</p>
+  <div class="card rv" data-d="2" style="margin-top:24px;border-left:3px solid var(--am)">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:12px">A morning in the life</div>
+    <p style="font:400 clamp(15px,1.7vw,18px)/1.65 var(--sa);color:var(--mt);margin:0">Priya, a scrum master on a healthcare SPM team, starts Tuesday with five tabs open and standup in twenty minutes. She checks Slack, then EAP, then the ITSM module, then PPM — stitching her own status together by hand. She still walks in having missed the incident about to sink a story due Thursday. The information existed. It was just scattered across five modules that never talk.</p>
+  </div>
+
+  <h3 class="rv" data-d="2" style="margin-top:34px">Problem 1 — To see everything, you hop across workspaces.</h3>
+  <p class="ld rv" data-d="2" style="margin-top:8px">It all lives on one platform — but split across modules that don't talk to each other, so the user assembles the picture by hand every morning:</p>
 
   <div class="jmap rv" data-d="2">
     <div class="jm"><div class="ja">Email / Slack</div><div class="jq">"What landed overnight?" — approvals, messages, escalations.</div></div>
@@ -213,13 +231,18 @@ footer .fm span{color:var(--ac)}
     <div class="jm gap"><div class="ja">CWM</div><div class="jq">Optional. Nothing triggers them to come here first.</div></div>
   </div>
 
-  <p class="ld rv" data-d="3" style="margin-top:18px">All of this data is in the same platform, the same database. But the user experiences it as 5 separate apps. CWM could unify this — but today it's just another stop, not the starting point.</p>
+  <p class="ld rv" data-d="3" style="margin-top:16px">Same database. Five separate apps. The user stitches the connections together manually — every single morning.</p>
 
-  <h3 class="rv" data-d="3" style="margin-top:30px">2. Some teams escape to outside tools entirely.</h3>
-  <p class="ld rv" data-d="3" style="margin-top:8px">When ServiceNow's own modules feel too heavy for everyday collaboration, some SPM teams adopt Asana or Monday.com on the side. Those tools are simple and fast — but completely disconnected from ServiceNow's enterprise data. CWM was built to prevent this escape. But "boards and docs in one place" isn't a strong enough pull when Asana already does that well.</p>
+  <div class="rv" data-d="3" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+    <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">~1,200</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">app switches per day</div></div>
+    <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">~4 hrs</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">a week just reorienting</div></div>
+    <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">9.5 min</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">to refocus after each switch</div></div>
+  </div>
+  <p class="rv" data-d="3" style="font-size:12px;color:var(--md);margin-top:8px">The cost of context-switching is well documented — Harvard Business Review (2022); Cornell University &amp; Qatalog. This is that tax, sitting inside one platform.</p>
 
-  <h3 class="rv" data-d="4" style="margin-top:30px">3. The unique advantage is invisible.</h3>
-  <p class="ld rv" data-d="4" style="margin-top:8px">CWM sits on the same database as ITSM, HR, PPM, and EAP. Connected Work can already pull from any of these tables. That's a structural advantage no outside tool can replicate. But today it shows up as rows in a board column — not as intelligence. <strong>The thing that makes CWM different from Asana or Monday is the thing CWM doesn't surface.</strong></p>
+  <h3 class="rv" data-d="3" style="margin-top:34px">Problem 2 — When you open CWM, you get records without context.</h3>
+  <p class="ld rv" data-d="3" style="margin-top:8px">CWM is meant to be where this comes together. But when a user opens it, Connected Work pulls the incident, the approval, the story onto the board as <strong>flat rows</strong>. You see the incident. You don't see that it's blocking your sprint story — due Thursday. Entities, not relationships.</p>
+  <p class="ld rv" data-d="4" style="margin-top:12px">So CWM becomes one more place to check, not the place that makes sense of the rest. "Boards and docs in one place" isn't a reason to switch when Asana already does that well. <strong>Today, CWM doesn't offer enough to be worth opening for collaboration.</strong></p>
 </div>
 </section>
 <hr class="hr">
@@ -344,32 +367,26 @@ footer .fm span{color:var(--ac)}
 <div class="w">
   <div class="rv"><span class="ey">Act 09 — Roadmap</span></div>
   <h2 class="rv" data-d="1">Each phase makes the Pulse smarter.</h2>
-  <p class="ld rv" data-d="2">Timelines assume CWM's existing 2–3 month release cadence.</p>
+  <p class="ld rv" data-d="2">Three phases — the same ones in the PRD. Timelines assume CWM's existing 2–3 month release cadence.</p>
 
   <div class="rg rv" data-d="2">
-    <div class="card rc"><div class="rt" style="background:var(--ac)">P1</div><div class="rtm">~1 quarter</div><h3>Board-level</h3>
-      <div class="ri">Auto-populated My Space</div>
-      <div class="ri">Sprint burndown + velocity</div>
-      <div class="ri">Inline comments on tasks</div>
-      <div class="ri">AI status generation</div>
+    <div class="card rc"><div class="rt" style="background:var(--ac)">Phase 1</div><div class="rtm">~1 quarter</div><h3>Board-level intelligence</h3>
+      <div class="ri">AI-ranked priority list</div>
+      <div class="ri">Overnight diff across boards</div>
+      <div class="ri">Sprint metrics — burndown + velocity</div>
+      <div class="ri">Tap-to-navigate deep links</div>
+      <div class="ri">Daily push notification</div>
     </div>
-    <div class="card rc"><div class="rt" style="background:var(--rd)">P2</div><div class="rtm">~1 quarter</div><h3>Cross-board</h3>
-      <div class="ri">Workload per person</div>
-      <div class="ri">Dependency alerts</div>
-      <div class="ri">Semantic search</div>
-      <div class="ri">Overnight diff (single-system)</div>
-    </div>
-    <div class="card rc"><div class="rt" style="background:var(--em)">P3</div><div class="rtm">~1–2 quarters</div><h3>Cross-system</h3>
-      <div class="ri">ITSM → sprint impact</div>
-      <div class="ri">PPM approval → task alerts</div>
-      <div class="ri">Full Daily Pulse GA</div>
-      <div class="ri">Role-aware briefings</div>
-    </div>
-    <div class="card rc"><div class="rt" style="background:var(--pr)">P4</div><div class="rtm">~2 quarters</div><h3>Predictive</h3>
+    <div class="card rc"><div class="rt" style="background:var(--pr)">Phase 2</div><div class="rtm">~1–2 quarters</div><h3>Cross-system reasoning</h3>
+      <div class="ri">Cross-system impact alerts (ITSM / PPM / cross-board)</div>
       <div class="ri">Sprint overload prediction</div>
-      <div class="ri">Descope recommendations</div>
-      <div class="ri">Auto-escalation</div>
-      <div class="ri">Velocity-based advisor</div>
+      <div class="ri">Role-aware views</div>
+    </div>
+    <div class="card rc"><div class="rt" style="background:var(--em)">Phase 3</div><div class="rtm">~2 quarters</div><h3>Agents &amp; autonomy</h3>
+      <div class="ri">Stale-item agent</div>
+      <div class="ri">Descope recommendation</div>
+      <div class="ri">Semantic search</div>
+      <div class="ri">AI status generation</div>
     </div>
   </div>
 </div>
@@ -424,6 +441,21 @@ footer .fm span{color:var(--ac)}
   <p class="rv" data-d="1" style="font:300 clamp(26px,4.5vw,48px)/1.08 var(--se);color:var(--pp);margin-top:6px">Only CWM can make them <span style="color:var(--ac);font-style:italic">aware</span></p>
   <p class="rv" data-d="2" style="font:300 clamp(26px,4.5vw,48px)/1.08 var(--se);color:var(--pp);margin-top:6px">of your entire enterprise.</p>
   <p class="rv" data-d="3" style="margin-top:26px;font-size:15px;color:var(--md);max-width:44ch;margin-left:auto;margin-right:auto">Because it sits on the same platform as your incidents, approvals, sprints, and team data. That's not an integration. That's a moat.</p>
+</div>
+</section>
+<hr class="hr">
+
+<!-- REFERENCES -->
+<section style="padding:clamp(48px,7vw,90px) 0">
+<div class="w">
+  <div class="rv"><span class="ey">References</span></div>
+  <h2 class="rv" data-d="1" style="font-size:clamp(24px,3.4vw,34px)">Where the numbers come from.</h2>
+  <ol class="rv" data-d="2" style="margin:22px 0 0 20px;font-size:14px;line-height:1.65;color:var(--mt)">
+    <li style="margin:11px 0">Harvard Business Review (2022), <em>"How Much Time and Energy Do We Waste Toggling Between Applications?"</em> — digital workers switch apps ~1,200 times a day and lose ~4 hours a week reorienting.</li>
+    <li style="margin:11px 0">Cornell University &amp; Qatalog, <em>Workgeist Report</em> — it takes ~9.5 minutes on average to return to a productive flow after switching apps.</li>
+    <li style="margin:11px 0">Dr. Gloria Mark, University of California, Irvine — research on interruption and attention; ~23 minutes to fully refocus after an interruption.</li>
+    <li style="margin:11px 0">ServiceNow CWM business data (May 2026) and competitive review across Monday.com, Asana, Atlassian, Linear, and Notion.</li>
+  </ol>
 </div>
 </section>
 
