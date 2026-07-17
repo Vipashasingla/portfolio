@@ -13,6 +13,7 @@ portfolio/
 │   ├── daily-pulse.html    # your CWM / Daily Pulse case study (embedded)
 │   └── nykaa-routine.html  # your Nykaa / Routine case study (embedded)
 ├── assets/                 # put images / your resume PDF here
+├── tools/                 # put your MVP here
 ├── netlify.toml            # optional Netlify config
 └── README.md
 ```
