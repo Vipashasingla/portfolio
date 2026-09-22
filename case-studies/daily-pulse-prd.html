@@ -86,7 +86,7 @@ td:first-child{color:var(--pp);font-weight:500}
       <span><b>Author</b> Vipasha Singla</span>
       <span><b>Updated</b> September 2026</span>
       <span><b>Status</b> Draft</span>
-      <span><b>Version</b> 4.0</span>
+      <span><b>Version</b> 6.0</span>
     </div>
     <p class="tocs">Jump to:
       <a href="#problem">Problem</a> ·
@@ -103,7 +103,7 @@ td:first-child{color:var(--pp);font-weight:500}
       <a href="#risks">Risks</a> ·
       <a href="#oq">Open questions</a>
     </p>
-    <div class="call"><span class="lbl">What changed in v4.0</span>Revised after CWM shipped its sprint dashboard, and cut hard. <strong>Scope went from 17 requirements to 8.</strong> The snapshot job and sprint metrics are delivered and now sit in a Delivered table; role-aware views, semantic search, AI status generation and the autonomous agents are removed from the plan rather than deferred. Requirements are renumbered FR-1 to FR-8 to match. Two new sections: why this surface is CWM and not a platform-level one, and the research behind the thesis — including what hasn't been validated.</div>
+    <div class="call"><span class="lbl">What changed in v6.0</span>Reframed around two gaps instead of three. Configuration is now stated as the larger problem, and its fix runs in two steps: <strong>FR-12 suggests the board setup in Phase 1</strong> (rule-based, no usage history needed) and <strong>FR-9 learns the team's behaviour in Phase 2</strong> and moves the surface with the work. <strong>FR-5 quick capture is cut</strong> — the gap it answered did not survive scrutiny, and a requirement whose problem statement has been withdrawn should not sit in a plan waiting for a justification. It returns only if user research finds the need. IDs remain stable and are not renumbered.</div>
   </header>
 
   <!-- PROBLEM -->
@@ -155,8 +155,8 @@ td:first-child{color:var(--pp);font-weight:500}
     <h3>3. What's at risk before it's too late</h3>
     <p>Predictions, not reports. "Sprint at 120% of average velocity. Team B has an unresolved dependency from Team A. This item stuck 3x normal cycle time." Early warning, not a post-mortem.</p>
     <h3>4. Then: act where you stand</h3>
-    <p>Each Pulse item carries its actions inline — nudge the owner, move the date, split or reassign, snooze until tomorrow, capture a follow-up. No navigation, no form. A briefing that only informs sends the user elsewhere to do the work, and they stay there.</p>
-    <p>Alongside it, <strong>quick capture</strong>: one field, no project, no board, no state. Type "chase the vendor invoice" and it appears on tomorrow's Pulse if it isn't done. Promote it to a board later only if it grows into something that deserves one. This is the write half of the loop — and the only part of the product that delivers value on day one with zero configuration.</p>
+    <p>Each Pulse item carries its actions inline — nudge the owner, move the date, split or reassign, snooze until tomorrow. No navigation, no form. A briefing that only informs sends the user elsewhere to do the work, and they stay there.</p>
+    <p>And the surface itself arrives configured. The side panel that today asks which view, which columns and which lanes should open with those questions already answered for the work in front of the user (FR-12), so the board is useful before anyone has made a single setup decision.</p>
     <div class="call"><span class="lbl">Two surfaces, one workspace</span>My Space hosts the Daily Pulse — it's why you open CWM (orientation). Team Boards are where work gets done (execution). The sprint dashboard sits inside the Pulse as the answer to "how are we tracking," not as a separate destination. Every insight deep-links to the board and item that needs attention.</div>
   </section>
 
@@ -171,19 +171,20 @@ td:first-child{color:var(--pp);font-weight:500}
       <tbody>
         <tr><td>A briefing needs somewhere to land</td><td>A platform-level briefing can say a sprint is at risk, then deep-link into five apps to act — the fragmentation it was meant to solve. CWM is the only SPM surface already holding boards, docs and tasks, so orientation and execution sit together.</td></tr>
         <tr><td>CWM already holds the joins</td><td>Integrations with Project Workspace (planned work) and EAP (sprint execution), plus Connected Work for records from any table. The insight comes from the join between planned, committed and ad-hoc work, and those edges already meet here. A new surface would rebuild them.</td></tr>
-        <tr><td>Nothing to displace</td><td>ITSM and HR users have entrenched workspaces and morning habits. CWM's low usage is the asset: no first-open habit to break, making it the cheapest place in the portfolio to establish one.</td></tr>
         <tr><td>A quality bar you can hit</td><td>Platform-wide means every persona and module on day one, and reasoning accuracy is what kills this product. One audience, one set of joins, one accuracy target — expand after the predictions hold.</td></tr>
       </tbody>
     </table></div>
+    <div class="call"><span class="lbl">Information architecture — decided, not open</span>Two dashboards sitting as siblings force the user to choose which is theirs on every visit. <strong>My Work holds the Pulse</strong> — personal, cross-project, judgment. <strong>Board-level measurement moves inside the board</strong> as the answer to "how is this team tracking," and stops being a separate destination. One hierarchy of answers, one place to start.</div>
+
     <div class="call"><span class="lbl">Access — decided, not open</span>Zero configuration cannot mean bypassing ACLs or entitlements. <strong>Two-tier disclosure:</strong> a Pulse item states the fact and the impact ("blocked by an unresolved incident, sprint ends Thursday"), derived server-side, exposing no record data and requiring no source-table permission. The record and its deep link appear only for users whose existing role and entitlement already permit it; everyone else sees the impact and who to ask. To be validated with a platform architect before FR-1 is built.</div>
   </section>
 
   <!-- SCOPE -->
   <section id="scope">
     <div class="kick">05 — What's in scope</div>
-    <h2>Eight requirements.</h2>
+    <h2>Eleven requirements, two gaps.</h2>
 
-    <div class="call"><span class="lbl">Design constraint on every requirement — the SMB test</span>If a team of six with no administrator can't get something useful out of it within ten minutes, it isn't done. This rules out anything needing a new field, a template choice or a role assignment before first value — which is why quick capture (FR-5) ships in Phase 1 beside the intelligence, and why role-aware views were cut rather than deferred.</div>
+    <div class="call"><span class="lbl">Design constraint on every requirement — the SMB test</span>If a team of six can't get something useful out of a board within ten minutes <strong>without opening the settings panel</strong>, it isn't done. Configuration here is not admin-gated — it is handed to the end user, who must pick the view, the columns, the kanban lanes, the grouping and the fields before the board is worth anything, and must revisit those choices every time the work changes phase. This constraint rules out any requirement whose first value depends on the user answering that panel, which is why FR-12 inverts it and why role-aware views were cut rather than deferred.</div>
 
     <h3>Delivered</h3>
     <div class="tw"><table>
@@ -195,7 +196,7 @@ td:first-child{color:var(--pp);font-weight:500}
     </table></div>
     <p>These were the expensive prerequisites and they are in the product. Everything below builds on the time series they create rather than duplicating the view they produce.</p>
 
-    <h3>Phase 1 — Judgment and capture <span style="font-family:var(--mo);font-size:11px;color:var(--mu,#9CA3AF)">· ~1 quarter</span></h3>
+    <h3>Phase 1 — Judgment and setup <span style="font-family:var(--mo);font-size:11px;color:var(--mu,#9CA3AF)">· ~1 quarter</span></h3>
     <div class="tw"><table>
       <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
       <tbody>
@@ -203,7 +204,7 @@ td:first-child{color:var(--pp);font-weight:500}
         <tr><td class="idc">FR-2</td><td>Ranked priorities with reasons — ranks the user's items by cross-system signals (due date, blocker status, dependency count, cycle-time deviation) and states why each matters</td><td><span class="p p0">P0</span></td></tr>
         <tr><td class="idc">FR-3</td><td>Overnight diff — what changed since the user's last session (state, comments, reassignments, due dates) across boards and connected records</td><td><span class="p p0">P0</span></td></tr>
         <tr><td class="idc">FR-4</td><td>Act in place — inline actions on every Pulse item (nudge owner, move date, split, reassign, snooze) plus a deep link to the record, executed without leaving My Space</td><td><span class="p p0">P0</span></td></tr>
-        <tr><td class="idc">FR-5</td><td>Quick capture — a single free-text field creating a personal item with no project, board, state or owner required; resurfaces on the next Pulse until closed; promotable to a board item later</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-12</td><td>Suggested board setup — invert the configuration side panel from asking to proposing. A new board or sprint arrives with the view, columns and kanban lanes already set for the work about to be done; the panel remains available to change any of it, but answering it is no longer the price of a usable board. Rule-based on work type and sprint state, requiring no usage history</td><td><span class="p p0">P0</span></td></tr>
       </tbody>
     </table></div>
 
@@ -213,11 +214,14 @@ td:first-child{color:var(--pp);font-weight:500}
       <tbody>
         <tr><td class="idc">FR-6</td><td>Cross-system impact alerts — surface when a connected record blocks or unblocks a sprint item (an incident, a pending approval, a Project Workspace plan change, or a cross-board dependency), with the downstream impact chain</td><td><span class="p p0">P0</span></td></tr>
         <tr><td class="idc">FR-7</td><td>Overload prediction — alert when committed work exceeds the team's historical delivery rate, using the snapshot time series</td><td><span class="p p1">P1</span></td></tr>
-        <tr><td class="idc">FR-8</td><td>Follow-up resurfacing — captured items and commitments made from the Pulse reappear until closed or explicitly dropped, so nothing depends on the user remembering</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-8</td><td>Follow-up resurfacing — commitments made from the Pulse (a nudge sent, a date moved, an item snoozed) reappear until closed or explicitly dropped, so nothing depends on the user remembering</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-9</td><td>View intent — building on FR-12, learn from the team's actual usage and move the surface with the work: kanban while a sprint runs, list when the sprint is being assigned, card view during backlog grooming, timeline when a plan or quarter is in play, the Pulse otherwise. <strong>Suggested default only</strong> — one-click override, override remembered per user, and override rate instrumented as the health check on the phase model</td><td><span class="p p0">P0</span></td></tr>
+        <tr><td class="idc">FR-10</td><td>Distribution signals — at assignment time, surface how work has been distributed across recent sprints (repetition by item type or component, variety, and sequence given dependencies). <strong>Descriptive only:</strong> team-aggregate, opt-in at team level, visible only to the person accountable for the allocation. No per-person scores, no rankings, no recommended assignees</td><td><span class="p p1">P1</span></td></tr>
+        <tr><td class="idc">FR-11</td><td>View-usage reporting — show admins which views their teams actually open, by phase, over time, including views created and never opened again</td><td><span class="p p1">P1</span></td></tr>
       </tbody>
     </table></div>
 
-    <div class="call cost"><span class="lbl">Cut from the plan</span>Role-aware views, semantic search, AI status generation, the stale-item agent and the descope recommendation agent are <strong>removed, not deferred</strong>. Each needs either configuration before first value or a level of trust in the reasoning that hasn't been earned. They return only once FR-1 clears its accuracy bar. Cost of what remains: roughly one quarter of CWM Core and Agile capacity, held against broadening Connected Work and net-new board features.</div>
+    <div class="call cost"><span class="lbl">Cut from the plan</span>Role-aware views, semantic search, AI status generation, the stale-item agent and the descope recommendation agent are <strong>removed, not deferred</strong> — each needs either configuration before first value or a level of trust in the reasoning that hasn't been earned, and they return only once FR-1 clears its accuracy bar. <strong>FR-5 quick capture is also cut</strong>, for a different reason: its problem statement was withdrawn in v6.0 and it returns only if user research evidences the need. Cost of what remains: roughly one quarter of CWM Core and Agile capacity, held against broadening Connected Work and net-new board features.</div>
   </section>
 
   <!-- OUT OF SCOPE -->
@@ -267,11 +271,11 @@ td:first-child{color:var(--pp);font-weight:500}
         <tr><td>3</td><td>Read top insight: "API migration at risk — ITSM incident #4021 unresolved, sprint ends Thursday."</td><td class="idc">15s</td></tr>
         <tr><td>4</td><td>Tap insight → board opens with that story highlighted, incident link inline</td><td class="idc">20s</td></tr>
         <tr><td>5</td><td>Reassign to on-call engineer inline. Add comment. Flag for standup.</td><td class="idc">60s</td></tr>
-        <tr><td>6</td><td>Type two follow-ups into quick capture — no board, no fields. They'll be on tomorrow's Pulse.</td><td class="idc">80s</td></tr>
-        <tr><td>7</td><td>Done. Cross-system risk identified and resolved, follow-ups captured — without opening email, Slack, or ITSM separately.</td><td class="idc">90s</td></tr>
+        <tr><td>6</td><td>Snooze a second item to tomorrow, nudge the owner of a third — both without leaving the Pulse.</td><td class="idc">80s</td></tr>
+        <tr><td>7</td><td>Done. Cross-system risk identified and resolved — without opening email, Slack, or ITSM separately.</td><td class="idc">90s</td></tr>
       </tbody>
     </table></div>
-    <div class="call cost"><span class="lbl">Today</span>With the dashboard, she learns the sprint is slipping in 5 seconds. Finding out why, and doing something about it, still takes 15+ minutes across 4 modules — and the follow-ups end up on a sticky note.</div>
+    <div class="call cost"><span class="lbl">Today</span>With the dashboard, she learns the sprint is slipping in 5 seconds. Finding out why, and doing something about it, still takes 15+ minutes across 4 modules.</div>
   </section>
 
   <!-- RESEARCH -->
@@ -283,12 +287,14 @@ td:first-child{color:var(--pp);font-weight:500}
       <tbody>
         <tr><td>2.5 years building CWM</td><td>Five core UI surfaces across four SPM teams, including sprint metrics and agile components.</td></tr>
         <tr><td>50+ customer case tasks</td><td>PPM and Project Workspace domain — customer problems in their own words, in writing.</td></tr>
-        <tr><td>Escalation root-cause triage</td><td>Around a quarter traced to product behaviour diverging from user expectation rather than misconfiguration. Configuration divergence was the most common root cause, which is the evidence behind the zero-config constraint.</td></tr>
+        <tr><td>Escalation root-cause triage</td><td>Around a quarter traced to product behaviour diverging from user expectation rather than misconfiguration. Configuration divergence was the most common root cause — and because CWM's configuration is self-serve rather than admin-gated, that divergence is being produced by end users answering a settings panel they have no basis to answer. This is the evidence behind the zero-config constraint.</td></tr>
         <tr><td>Adoption data, adjacent AI feature</td><td>A sharp post-launch drop in another SPM product. Shipping an AI surface and having it used are different problems — the reason trust and accuracy are treated here as kill criteria rather than polish.</td></tr>
         <tr><td>Secondary research</td><td>Context-switching cost (HBR 2022; Cornell/Qatalog) and competitive review across Monday.com, Asana, Atlassian, Linear, Notion.</td></tr>
+        <tr><td>A hypothesis this research withdrew</td><td>An earlier draft claimed that roughly half of a working day is too small for a board and therefore lives outside the product. No source supported it and it assumed a product limitation not verified against CWM. It was removed rather than defended, and the quick-capture requirement went with it.</td></tr>
+        <tr><td>Market evidence on views and configuration</td><td>Published ClickUp reviews documenting default views that go unopened and the "which view do I use for what" problem; Jira documentation confirming board view settings apply per user; Atlassian and Asana admin analytics reporting accounts and activity but never view-level usage; analyses of Linear's opinionated defaults, including a fifty-engineer team onboarding in an afternoon versus two to four weeks of Jira admin setup. Asana already auto-suggests assignees from workload and skill tags — capacity matching, not distribution fairness.</td></tr>
       </tbody>
     </table></div>
-    <div class="call cost"><span class="lbl">Not yet validated</span>No structured interviews with delivery leads have been run. Before committing engineering: two weeks, no engineering time, 8–10 scrum masters and delivery leads across three customers already running sprints in CWM plus three teams that left for an external tool. Questions: what did you open first this morning and why; what did you do in the ten minutes after seeing the burndown off track; where do your untracked follow-ups live; when did you last configure something in CWM and who did it; what would make you stop paying for the other tool. <strong>Falsification:</strong> if leads say the dashboard is sufficient, or that they would rather act on the sprint inside EAP, the judgment layer is the wrong bet and the investment belongs in the Project Workspace and EAP integrations instead.</div>
+    <div class="call cost"><span class="lbl">Not yet validated</span>No structured interviews with delivery leads have been run. Before committing engineering: two weeks, no engineering time, 8–10 scrum masters and delivery leads across three customers already running sprints in CWM plus three teams that left for an external tool. Questions: what did you open first this morning and why; what did you do in the ten minutes after seeing the burndown off track; where do your untracked follow-ups live; when did you last configure something in CWM and who did it; what would make you stop paying for the other tool. Three more on the workspace: ask each lead to predict their most-used view before being shown the telemetry; ask which of the two dashboards they consider theirs; ask how they actually decide who gets which story today. <strong>Falsification:</strong> if leads say the dashboard is sufficient, or that they would rather act on the sprint inside EAP, the judgment layer is the wrong bet and the investment belongs in the Project Workspace and EAP integrations instead.</div>
   </section>
 
   <!-- METRICS -->
@@ -301,7 +307,7 @@ td:first-child{color:var(--pp);font-weight:500}
         <tr><td>Orientation</td><td>Open to first action on a Pulse item</td><td>&lt; 90 seconds — the instrumentable proxy for "I know what to change"</td></tr>
         <tr><td>Activation</td><td>Zero-config value</td><td>&gt; 60% of Pulse items visible to a brand-new team before any configuration</td></tr>
         <tr><td>Counter-metric</td><td>Dismiss / mute rate, with prediction accuracy</td><td>&lt; 10% dismissed, accuracy &gt; 70%. The kill signal — below the accuracy bar, ship the chart and stop claiming judgment.</td></tr>
-        <tr><td>Counter-metric</td><td>Loop completion</td><td>&gt; 35% of items acted on inside CWM; captured items closed rather than abandoned. Low values mean a newsletter and a second inbox.</td></tr>
+        <tr><td>Counter-metric</td><td>Loop completion</td><td>&gt; 35% of Pulse items acted on inside CWM rather than somewhere else. A low value means we built a newsletter.</td></tr>
       </tbody>
     </table></div>
   </section>
@@ -331,8 +337,10 @@ td:first-child{color:var(--pp);font-weight:500}
         <tr><td>Cross-system reasoning produces false positives (alert fatigue)</td><td>Medium</td><td>Start with high-confidence signals only (blocked, overdue). Expand gradually based on accuracy.</td></tr>
         <tr><td>SPM users don't see a reason to open CWM over module-hopping</td><td>High</td><td>The daily push notification creates the entry point. The Pulse shows cross-system value no individual module provides.</td></tr>
         <tr><td>Engineering capacity split across 3 plugins</td><td>Medium</td><td>P1 focuses on CWM Core + Agile. AI skills follow once the foundation is stable.</td></tr>
+        <tr><td>Proposed setup is wrong often enough that users distrust it and open the panel anyway</td><td>Medium</td><td>FR-12 is rule-based on work type and sprint state, which is a narrow and testable space. Accept rate is the metric; below roughly two thirds the rules are wrong and should be simplified rather than extended. The panel is never removed, so the downside is a wasted click, not a blocked user.</td></tr>
+        <tr><td>View intent guesses wrong and users fight it every morning</td><td>Medium</td><td>Suggestion only, one-click override, override remembered. Override rate above one third means the phase model is wrong and FR-9 is pulled. Failure here is cheap and reversible — a wrong view costs a click, unlike a wrong risk prediction, which costs trust.</td></tr>
+        <tr><td>Distribution signals are read as performance data about individuals</td><td>High</td><td>Team-aggregate by default, opt-in at team level, no per-person scores or rankings, no recommended assignees. Reviewed with HR and responsible-AI stakeholders before build, since the platform also runs HR. If it cannot ship descriptively, it does not ship.</td></tr>
         <tr><td>Two-tier disclosure is rejected by platform governance</td><td>Medium</td><td>Validate with a platform architect before FR-1 is built. Fallback: restrict Phase 1 reasoning to records the user can already see, accept a smaller zero-config surface, and report it honestly against the 60% target.</td></tr>
-        <tr><td>Quick capture becomes a private inbox nobody triages</td><td>Medium</td><td>Captured items resurface until closed (FR-8) and abandonment is a named counter-metric. If they are not being closed, cut the feature rather than expand it.</td></tr>
         <tr><td>Requirements drift back toward configuration to satisfy enterprise asks</td><td>High</td><td>The SMB test gates each phase. Anything needing setup before first value ships as an optional refinement on a zero-config default, never as the default.</td></tr>
         <tr><td>The Pulse reads as a second dashboard, confusing users about where to look</td><td>Medium</td><td>The dashboard is embedded in the Pulse as the "how are we tracking" answer rather than shipped as a rival surface. One destination, one hierarchy of answers.</td></tr>
                       </tbody>
@@ -347,7 +355,7 @@ td:first-child{color:var(--pp);font-weight:500}
       <li><strong>Ranking approach:</strong> weighted formula (due date × blocker × dependencies × cycle time) or LLM reasoning over full context? A formula is predictable and fast; an LLM is more nuanced but slower and harder to debug.</li>
       <li><strong>Push notification threshold:</strong> send daily regardless, or only when there are actionable insights? Always-send builds the habit, but empty Pulses erode trust.</li>
       <li><strong>Scale testing:</strong> the Pulse aggregates across boards. At 2000+ connected items per user, performance is unvalidated. Needs load testing before Phase 2.</li>
-      <li><strong>Capture scope:</strong> should quick capture be personal-only at first, or shareable with the team from day one? Personal is simpler and safer for adoption; shared makes it useful to a scrum master immediately but reintroduces questions about permissions, notification and ownership.</li>
+      <li><strong>Suggestion granularity:</strong> should FR-12 propose a setup per board, or per team once and then apply it everywhere? Per board is more accurate and more repetitive; per team is one decision but wrong for any team running mixed work.</li>
       <li><strong>Dashboard placement:</strong> should the shipped dashboard be embedded inside the Pulse, linked from it, or left standalone? Embedding makes the Pulse the single destination but risks a crowded first screen and rework on a surface that just shipped.</li>
       <li><strong>Competitive moat:</strong> if Atlassian extends its Teamwork Graph to include ServiceNow data via marketplace integrations, the cross-system advantage weakens. Should CWM invest in platform-exclusive data sources (CMDB, financial plans, resource allocations) to maintain differentiation?</li>
     </ol>
