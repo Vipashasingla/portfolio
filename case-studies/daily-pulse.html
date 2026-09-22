@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Connecting Dots No Other Tool Can See · CWM Case Study</title>
+<title>From Measurement to Judgment · CWM Daily Pulse Case Study</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@ section{padding:clamp(68px,9vw,120px) 0}
 .fp .fps{font-size:12px;color:var(--md);margin-top:8px}
 
 /* roadmap */
-.rg{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rg{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px}
 .rc{padding:20px 16px}.rc h3{font-size:14px;margin-bottom:10px}
 .rc .rt{font:700 9px/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:4px;color:#fff;display:inline-block;margin-bottom:4px}
 .rc .rtm{font:400 9px/1 var(--mo);color:var(--md);margin-bottom:10px}
@@ -135,6 +135,7 @@ footer .fm span{color:var(--ac)}
 
 @media(max-width:860px){.sg,.ba,.mg,.hci .hb{grid-template-columns:1fr}.rg{grid-template-columns:1fr 1fr}.fc{grid-template-columns:1fr}.fa{flex-direction:row;padding:10px 0}.fa small{writing-mode:horizontal-tb}.jm{grid-template-columns:36px 1fr}.jm .jq{display:none}}
 @media(max-width:560px){.rg{grid-template-columns:1fr}.hci .hcl:first-child{border-right:0;border-bottom:1px solid var(--ln)}}
+@media(max-width:860px){.jmap.keep .jm{grid-template-columns:36px 1fr}.jmap.keep .jm .ja{grid-column:2}.jmap.keep .jm .jq{display:block;grid-column:2;margin-top:3px}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}.mb i{transition:none!important}.scue span{animation:none}}
 </style>
 </head>
@@ -146,36 +147,50 @@ footer .fm span{color:var(--ac)}
 <div class="w">
   <p class="ey rv">PM Case Study · 2026</p>
   <h1 class="rv" data-d="1">Connecting <i>dots</i><br>no other tool<br>can see.</h1>
-  <p class="hsub rv" data-d="2">CWM — ServiceNow's work-management tool, its answer to Asana or Monday.com — sits on the same platform as your IT incidents, HR cases, and project approvals. No other work tool can see all of that. This case study proposes making CWM the first thing every SPM (Strategic Portfolio Management) user opens each morning — then expanding from there.</p>
-  <div class="hframe rv" data-d="3"><b>My perspective:</b> I spent 2.5 years as a software engineer on CWM — building sprint metrics, data grids, and agile components across four SPM teams. I watched the product grow from launch to 3,085 monthly engaged users. I also watched people not use it as their starting point. This is my proposal for how to change that.</div>
+  <p class="hsub rv" data-d="2">CWM — ServiceNow's work-management product, its answer to Asana or Monday.com — runs on the same platform as an enterprise's IT incidents, HR cases and project approvals, and integrates with Project Workspace and Enterprise Agile Planning. No standalone tool can reach that much. Six months ago CWM shipped the measurement layer it was missing: burndown, scope change, progress by status. Measurement tells a delivery lead the sprint is slipping. It can't tell her which three items did it, or what to change before standup in twenty minutes. This case study is about that next layer — judgment, and the ability to act on it, without asking anyone to configure something first.</p>
+  <div class="hframe rv" data-d="3"><b>My perspective:</b> 2.5 years as a software engineer on CWM across four SPM teams — sprint metrics, data grids, agile components — plus 50+ customer case tasks in the PPM and Project Workspace domain. I watched the product grow, and I watched people not start their day in it. This is my proposal for what would change that.</div>
   <div class="hm rv" data-d="4">
     <span>By <b>Vipasha</b></span>
     <span>Role <b>SWE → PM</b></span>
     <span>Domain <b>Enterprise SaaS</b></span>
   </div>
-  <a href="daily-pulse-prd.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:32px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#fff;background:#2563EB;border-radius:999px;padding:14px 24px;box-shadow:0 16px 34px -18px rgba(37,99,235,.8)">Read the full PRD →</a>
+  <p class="rv" data-d="4" style="margin-top:20px;font-size:12px;color:var(--md);max-width:52ch">Commercial figures appear throughout as ratios and ranges rather than absolutes — deliberately, since the argument never depended on the exact numbers.</p>
+  <a href="daily-pulse-prd.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#fff;background:#2563EB;border-radius:999px;padding:14px 24px;box-shadow:0 16px 34px -18px rgba(37,99,235,.8)">Read the full PRD →</a>
 </div>
 <div class="scue"><span></span>scroll</div>
 </section>
 <hr class="hr">
 
-<!-- ACT 1: WHAT CWM IS -->
+<!-- ACT 1 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 01 — What CWM is</span></div>
+  <div class="rv"><span class="ey">Act 01 — What CWM is, and where it stands</span></div>
   <h2 class="rv" data-d="1">Collaboration inside the enterprise. That was the aim.</h2>
-  <p class="ld rv" data-d="2"><strong>CWM stands for Collaborative Work Management.</strong> It's ServiceNow's product for managing everyday work inside the Now Platform — the same platform that already runs ITSM, HR, customer service, and portfolio management for 85% of the Fortune 500.</p>
-  <p class="ld rv" data-d="3" style="margin-top:16px">The original aim: give ServiceNow customers a place where boards, docs, and tasks live together. A simpler, friendlier layer on top of the enterprise. <em>No more switching to Asana or Monday.com for lightweight work. Manage it here — where your enterprise data already lives.</em></p>
-  <p class="ld rv" data-d="3" style="margin-top:16px">Since January 2024 it has shipped at pace, and the collaboration surface is clean and genuinely usable. Build quality was never the problem — adoption is. So here's the question this case study answers: <em>why would anyone open CWM first?</em></p>
+  <p class="ld rv" data-d="2"><strong>CWM stands for Collaborative Work Management.</strong> It's ServiceNow's product for everyday work inside the Now Platform — the same platform that runs ITSM, HR, customer service and portfolio management for 85% of the Fortune 500. The aim was a simpler, friendlier layer on top of the enterprise: boards, docs and tasks together, so nobody has to leave for Asana or Monday.com.</p>
+  <p class="ld rv" data-d="3" style="margin-top:16px">It has shipped at pace since January 2024 and the collaboration surface is clean and genuinely usable. Build quality was never the problem. So here's the question this case study answers: <em>what turns a product people tried into the one they open first?</em></p>
+
+  <div class="sg rv" data-d="2">
+    <div class="card sc"><div class="sn">Low <i>thousands</i></div><div class="sl">Monthly engaged users</div><div class="ss">Growing at triple digits year over year.</div></div>
+    <div class="card sc"><div class="sn">~1<i>%</i></div><div class="sl">Of the enterprise customer base</div><div class="ss">Thousands of customers; fewer than a hundred with more than a handful of active users.</div></div>
+    <div class="card sc"><div class="sn">One <i>vertical</i></div><div class="sl">Where adoption concentrates</div><div class="ss">Alongside live deals displacing external work tools.</div></div>
+  </div>
+
+  <p class="ld rv" data-d="3" style="margin-top:34px">Real momentum, from a small base. Set against a customer base of thousands of enterprises, almost all with dedicated SPM teams, the picture is a product being <strong>discovered rather than depended on</strong> — tried by some teams, not the place SPM users start their day.</p>
+
+  <div class="note rv" data-d="3">
+    <div class="nt">The pieces are already there</div>
+    <p>Teams run agile sprints in it. Others pull records from across the platform onto boards through Connected Work. It integrates with <strong>Project Workspace</strong> for planned project work and with <strong>EAP</strong> for sprint execution. Individually, each is adopted. Collectively, they aren't yet connected into anything that earns the first click of the day — and that gap, not a missing feature, is the subject of this case study.</p>
+  </div>
 
   <div class="card rv" data-d="3" style="margin-top:28px">
     <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:14px">The ServiceNow vocabulary, in plain English</div>
     <dl style="display:grid;grid-template-columns:max-content 1fr;gap:11px 20px;margin:0;font-size:14px;line-height:1.5">
-      <dt style="font-weight:600;color:var(--pp)">CWM</dt><dd style="margin:0;color:var(--mt)">Collaborative Work Management — the product this case study is about. Boards, docs, and tasks, built into ServiceNow.</dd>
+      <dt style="font-weight:600;color:var(--pp)">CWM</dt><dd style="margin:0;color:var(--mt)">Collaborative Work Management — the product this case study is about. Boards, docs and tasks, built into ServiceNow.</dd>
       <dt style="font-weight:600;color:var(--pp)">SPM</dt><dd style="margin:0;color:var(--mt)">Strategic Portfolio Management — the teams that plan and track an enterprise's projects and portfolios. CWM's first audience.</dd>
       <dt style="font-weight:600;color:var(--pp)">ITSM</dt><dd style="margin:0;color:var(--mt)">IT Service Management — where IT incidents and requests are logged and resolved.</dd>
-      <dt style="font-weight:600;color:var(--pp)">PPM</dt><dd style="margin:0;color:var(--mt)">Project Portfolio Management — project plans, demands, and the approvals that gate them.</dd>
-      <dt style="font-weight:600;color:var(--pp)">EAP</dt><dd style="margin:0;color:var(--mt)">Enterprise Agile Planning — ServiceNow's agile tooling: epics, stories, sprints.</dd>
+      <dt style="font-weight:600;color:var(--pp)">PPM</dt><dd style="margin:0;color:var(--mt)">Project Portfolio Management — project plans, demands and the approvals that gate them.</dd>
+      <dt style="font-weight:600;color:var(--pp)">Project&nbsp;Workspace</dt><dd style="margin:0;color:var(--mt)">Where project managers run plans, schedules and tasks. CWM integrates with it.</dd>
+      <dt style="font-weight:600;color:var(--pp)">EAP</dt><dd style="margin:0;color:var(--mt)">Enterprise Agile Planning — ServiceNow's agile tooling: epics, stories, sprints. CWM integrates with it.</dd>
       <dt style="font-weight:600;color:var(--pp)">Connected&nbsp;Work</dt><dd style="margin:0;color:var(--mt)">A CWM capability that pulls records from any ServiceNow table onto a board.</dd>
       <dt style="font-weight:600;color:var(--pp)">Now&nbsp;Platform</dt><dd style="margin:0;color:var(--mt)">The shared ServiceNow platform — one database — that all of the above run on.</dd>
     </dl>
@@ -184,250 +199,273 @@ footer .fm span{color:var(--ac)}
 </section>
 <hr class="hr">
 
-<!-- ACT 2: WHERE CWM IS TODAY -->
+<!-- ACT 2 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 02 — Where CWM is today</span></div>
-  <h2 class="rv" data-d="1">Growing fast. From a tiny base.</h2>
-  <p class="ld rv" data-d="2">The numbers look good in isolation. Zoom out to the platform's reach and the picture changes.</p>
+  <div class="rv"><span class="ey">Act 02 — What shipped</span></div>
+  <h2 class="rv" data-d="1">The measurement layer is in.</h2>
+  <p class="ld rv" data-d="2">In the last six months CWM shipped a work dashboard: burndown against the ideal line, a scope-change view, progress by status. For this case study it's the most important thing that has happened to the product — not because it settles the argument, but because it moves the starting line.</p>
 
-  <div class="sg rv" data-d="2">
-    <div class="card sc"><div class="sn">3,085</div><div class="sl">Monthly engaged users</div><div class="ss">May 2026. Up 441% year-over-year.</div></div>
-    <div class="card sc"><div class="sn">$7.2<i>M</i></div><div class="sl">Open pipeline</div><div class="ss">142 opportunities. Up from $4.4M / 82 opps last month.</div></div>
-    <div class="card sc"><div class="sn">82</div><div class="sl">Customers at 10+ users</div><div class="ss">8 at 50+ MEUs. 76 customers growing 200%+.</div></div>
+  <h3 class="rv" data-d="2" style="margin-top:36px">Measurement, and the thing it cannot do.</h3>
+  <p class="ld rv" data-d="2" style="margin-top:8px">The same Tuesday morning, the same sprint, side by side.</p>
+
+  <div class="ba rv" data-d="2">
+    <div class="bf">
+      <div class="bt" style="color:var(--md)">Shipped — measurement</div>
+      <h3>What is happening.</h3>
+      <div class="bi">The burndown is above the ideal line.</div>
+      <div class="bi">Scope changed twice this sprint.</div>
+      <div class="bi">Eight items in progress, four blocked.</div>
+      <div class="bi">62% of committed points complete.</div>
+      <div class="bi"><strong>Answers one question, well: how are we tracking? Then it stops.</strong></div>
+    </div>
+    <div class="af">
+      <div class="bt">Proposed — judgment</div>
+      <h3>What to do about it.</h3>
+      <div class="bi">Three items put the line there — and <strong>one is blocked by an incident nobody has picked up.</strong></div>
+      <div class="bi">The project plan pulled a milestone in. <strong>You're three stories short of it.</strong></div>
+      <div class="bi">This item has sat in progress <strong>3× longer than your team's average.</strong></div>
+      <div class="bi">You'll land at 31 of 38 points. <strong>Here are three to descope.</strong></div>
+      <div class="bi"><strong>Answers the question that follows: what do I change before standup — and lets you change it right here.</strong></div>
+    </div>
   </div>
 
-  <p class="ld rv" data-d="3" style="margin-top:34px">Good momentum. But ServiceNow has roughly 7,700 enterprise customers, most with dedicated SPM teams. 3,085 monthly engaged users across that base means CWM is being discovered — not depended on. It's a tool some teams tried, not the tool SPM users start their day with.</p>
+  <div class="ns rv" data-d="3" style="margin-top:34px">
+    <div class="nl">The thesis, in one line</div>
+    <p>The dashboard <strong>measures</strong>. A delivery lead has to <strong style="color:var(--ac)">judge</strong>. This case study is the layer between those two words.</p>
+  </div>
 
-  <div class="note rv" data-d="3">
-    <div class="nt">Bright spots worth noting</div>
-    <p><strong>Healthcare is the dominant vertical</strong> — five of the largest open deals are healthcare systems. <strong>81% of Q2 pipeline is CWM sold alongside SPM</strong>, reinforcing the CWM-as-SPM-bridge motion. And <strong>competitive displacement is happening</strong> — one healthcare deal is actively replacing Monday.com, Asana, Trello, and Azure DevOps with CWM. 85 customers run agile sprints. 113 use Connected Work. The pieces are being adopted. They just aren't connected into something that earns the first click of the day.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:26px" class="rv" data-d="3">
+    <div class="card" style="border-top:3px solid var(--em)"><h3 style="font-size:16px;margin-bottom:10px">Why shipping it was the right call</h3><p style="font-size:13px;color:var(--md);line-height:1.6">The team didn't ship another board template. It shipped a surface whose only job is telling you where things stand — a bet that CWM's value is in what it <strong>tells</strong> you, not what it stores. This proposal makes the same bet, one layer up.</p></div>
+    <div class="card" style="border-top:3px solid var(--ac)"><h3 style="font-size:16px;margin-bottom:10px">And it built the expensive part</h3><p style="font-size:13px;color:var(--md);line-height:1.6">A burndown line needs a daily snapshot of sprint state. Once work is captured as time series, prediction becomes buildable — overload, cycle-time deviation, stalled items. Trend data was the hard prerequisite. It exists now, so none of the judgment layer starts from zero.</p></div>
   </div>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 3: WHY NOBODY OPENS IT FIRST -->
+<!-- ACT 3 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 03 — The problem</span></div>
-  <h2 class="rv" data-d="1">The problem, in two parts.</h2>
-  <p class="ld rv" data-d="2">To do their job, an SPM user needs a picture that spans systems. Two things stand in the way — and the second one is CWM's own doing.</p>
+  <div class="rv"><span class="ey">Act 03 — Research</span></div>
+  <h2 class="rv" data-d="1">How I formed this view — and what would change it.</h2>
+  <p class="ld rv" data-d="2">Four sources, and one gap I'd rather name than paper over.</p>
+
+  <div class="jmap keep rv" data-d="2">
+    <div class="jm"><div class="ja">Building the product, 2.5 years</div><div class="jq">Five core UI surfaces across four SPM teams, including sprint metrics and the agile components.</div></div>
+    <div class="jm"><div class="ja">50+ customer case tasks</div><div class="jq">PPM and Project Workspace domain — real customer problems, in their own words, in writing.</div></div>
+    <div class="jm"><div class="ja">Escalation root-cause triage</div><div class="jq">Around a quarter traced to product behaviour diverging from user expectation, not misconfiguration.</div></div>
+    <div class="jm"><div class="ja">Adoption data, adjacent AI feature</div><div class="jq">A sharp drop after launch in another SPM product. Shipping an AI surface and having it used are different problems.</div></div>
+  </div>
+
+  <p class="ld rv" data-d="3" style="margin-top:26px">The escalation finding is the one that shaped this most. When configuration divergence is the single most common root cause of customer pain, the problem isn't that the product can't be shaped to the customer. It's that value is <strong>contingent on someone shaping it</strong> — which is the argument in Act 04, arrived at from support data rather than from a whiteboard.</p>
+  <p class="ld rv" data-d="3" style="margin-top:14px">The adoption drop is the counterweight. It's the reason this proposal treats trust and accuracy as kill criteria rather than as polish, and why two of the four success metrics are counter-metrics.</p>
+
+  <div class="card rv" data-d="4" style="margin-top:30px;border-left:3px solid var(--am)">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:12px">The gap — and the two weeks that would close it</div>
+    <p style="font-size:14.5px;line-height:1.7;margin:0;color:var(--mt)">I have not run structured interviews with delivery leads. Everything here is grounded in support data, product knowledge and secondary research, which is enough to form a thesis and not enough to bet a roadmap on. Before writing a line of code I'd spend two weeks and no engineering time on this:<br><br>
+    <strong>Who:</strong> 8–10 scrum masters and delivery leads across three customers already running sprints in CWM, plus three teams that left for an external tool.<br><br>
+    <strong>What I'd ask:</strong> What did you open first this morning, and why? What did you do in the ten minutes after seeing the burndown off track? Where do your untracked follow-ups live right now? When did you last configure something in CWM, and who actually did it? What would make you stop paying for the other tool?<br><br>
+    <strong>What would falsify this:</strong> if leads tell me the dashboard is sufficient, or that they'd rather act on the sprint inside EAP than inside CWM, then the judgment layer is the wrong bet and the money belongs in the Project Workspace and EAP integrations instead. I'd want to know that in week two, not in quarter three.</p>
+  </div>
+</div>
+</section>
+<hr class="hr">
+
+<!-- ACT 4 -->
+<section>
+<div class="w">
+  <div class="rv"><span class="ey">Act 04 — The gap</span></div>
+  <h2 class="rv" data-d="1">From a chart to a decision.</h2>
+  <p class="ld rv" data-d="2">Measurement is solved. Three gaps sit between a measured sprint and a decided one, and each is a reason the product doesn't get opened first.</p>
 
   <div class="card rv" data-d="2" style="margin-top:24px;border-left:3px solid var(--am)">
     <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:12px">A morning in the life</div>
-    <p style="font:400 clamp(15px,1.7vw,18px)/1.65 var(--sa);color:var(--mt);margin:0">Priya, a scrum master on a healthcare SPM team, starts Tuesday with five tabs open and standup in twenty minutes. She checks Slack, then EAP, then the ITSM module, then PPM — stitching her own status together by hand. She still walks in having missed the incident about to sink a story due Thursday. The information existed. It was just scattered across five modules that never talk.</p>
+    <p style="font:400 clamp(15px,1.7vw,18px)/1.65 var(--sa);color:var(--mt);margin:0">Priya, a scrum master on a delivery team, has standup in twenty minutes. She opens the dashboard first now — burndown above the ideal line, progress flat — so she knows the sprint is slipping. She doesn't know which three items caused it, that one is waiting on an unassigned incident, or that a dependency cleared at 11pm. So she opens EAP, then the ITSM module, then PPM, and assembles the rest by hand. Fifteen minutes later she writes three follow-ups on a sticky note, because they're too small for a card. <strong>The chart told her something was wrong. It couldn't tell her what to do about it, and it had nowhere to put what she decided.</strong></p>
   </div>
 
-  <h3 class="rv" data-d="2" style="margin-top:34px">Problem 1 — To see everything, you hop across workspaces.</h3>
-  <p class="ld rv" data-d="2" style="margin-top:8px">It all lives on one platform — but split across modules that don't talk to each other, so the user assembles the picture by hand every morning:</p>
+  <h3 class="rv" data-d="2" style="margin-top:38px">Gap 1 — Measurement, but no diagnosis.</h3>
+  <p class="ld rv" data-d="2" style="margin-top:8px">The dashboard says the line moved. The reason it moved is always in a different module, so the user assembles the causal picture by hand, every morning:</p>
 
-  <div class="jmap rv" data-d="2">
-    <div class="jm"><div class="ja">Email / Slack</div><div class="jq">"What landed overnight?" — approvals, messages, escalations.</div></div>
-    <div class="jm"><div class="ja">EAP</div><div class="jq">"Where's my sprint?" — stories, backlog, sprint board.</div></div>
-    <div class="jm"><div class="ja">ITSM module</div><div class="jq">"What incidents need me?" — separate from sprint context.</div></div>
-    <div class="jm"><div class="ja">HR portal</div><div class="jq">"Any open requests?" — completely disconnected from work boards.</div></div>
-    <div class="jm"><div class="ja">PPM module</div><div class="jq">"What approvals are pending?" — no link to task-level impact.</div></div>
-    <div class="jm gap"><div class="ja">CWM</div><div class="jq">Optional. Nothing triggers them to come here first.</div></div>
+  <div class="jmap keep rv" data-d="2">
+    <div class="jm gap"><div class="ja">CWM dashboard</div><div class="jq">"Is the sprint on track?" — tells her it isn't. Not which items, not why.</div></div>
+    <div class="jm"><div class="ja">EAP</div><div class="jq">"Which stories moved?" — no blocker visible from here.</div></div>
+    <div class="jm"><div class="ja">ITSM module</div><div class="jq">"What's blocking them?" — the incident, unassigned, with no sprint context.</div></div>
+    <div class="jm"><div class="ja">PPM / Project Workspace</div><div class="jq">"What's waiting on approval?" — no link to task-level impact.</div></div>
+    <div class="jm"><div class="ja">Email / Slack</div><div class="jq">"What landed overnight?" — unranked, unconnected to any work item.</div></div>
   </div>
 
-  <p class="ld rv" data-d="3" style="margin-top:16px">Same database. Five separate apps. The user stitches the connections together manually — every single morning.</p>
-
-  <div class="rv" data-d="3" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+  <div class="rv" data-d="3" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
     <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">~1,200</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">app switches per day</div></div>
     <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">~4 hrs</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">a week just reorienting</div></div>
     <div style="flex:1;min-width:150px;background:var(--ink2);border:1px solid var(--ln);border-radius:10px;padding:15px 16px"><div style="font:400 26px/1 var(--se);color:var(--pp)">9.5 min</div><div style="font-size:12.5px;color:var(--md);margin-top:6px">to refocus after each switch</div></div>
   </div>
-  <p class="rv" data-d="3" style="font-size:12px;color:var(--md);margin-top:8px">The cost of context-switching is well documented — Harvard Business Review (2022); Cornell University &amp; Qatalog. This is that tax, sitting inside one platform.</p>
+  <p class="rv" data-d="3" style="font-size:12px;color:var(--md);margin-top:8px">Context-switching cost is well documented — Harvard Business Review (2022); Cornell University &amp; Qatalog. This is that tax, paid inside a single platform.</p>
 
-  <h3 class="rv" data-d="3" style="margin-top:34px">Problem 2 — When you open CWM, you get records without context.</h3>
-  <p class="ld rv" data-d="3" style="margin-top:8px">CWM is meant to be where this comes together. But when a user opens it, Connected Work pulls the incident, the approval, the story onto the board as <strong>flat rows</strong>. You see the incident. You don't see that it's blocking your sprint story — due Thursday. Entities, not relationships.</p>
-  <p class="ld rv" data-d="4" style="margin-top:12px">So CWM becomes one more place to check, not the place that makes sense of the rest. "Boards and docs in one place" isn't a reason to switch when Asana already does that well. <strong>Today, CWM doesn't offer enough to be worth opening for collaboration.</strong></p>
+  <h3 class="rv" data-d="3" style="margin-top:40px">Gap 2 — Nowhere to put small work.</h3>
+  <p class="ld rv" data-d="3" style="margin-top:8px">Chase the vendor invoice. Follow up with Priya after standup. Read the doc before Thursday. Roughly half of what fills a working day never reaches a project, and CWM wants a board, a card and a state before it will accept an item — so that half goes to sticky notes, self-DMs and flagged email instead. Asana and Monday won this ground by making capture nearly free: a keystroke, no fields. <strong>The plainest reason a work tool doesn't get opened first is that the things filling your day aren't in it.</strong></p>
+  <p class="ld rv" data-d="3" style="margin-top:14px">It cuts the other way too. A briefing you can only read is a newsletter. If the Pulse tells Priya a story is blocked and her only option is to go elsewhere to act, she'll go elsewhere and stay there. Read, decide, capture, close — the dashboard delivers the first step and nothing after it.</p>
+
+  <h3 class="rv" data-d="4" style="margin-top:40px">Gap 3 — Nothing works until someone configures it.</h3>
+  <p class="ld rv" data-d="4" style="margin-top:8px">ServiceNow's greatest strength is that it can be shaped to any enterprise on earth. The cost is that most surfaces are worth something only once somebody shapes them: fields, states, roles, templates, a defined sprint. Each one is a payment the user makes before the product pays anything back — and in the escalations I triaged, that gap between configured behaviour and expected behaviour was the most common root cause of customer pain.</p>
+  <p class="ld rv" data-d="4" style="margin-top:14px">The dashboard is a fair illustration. It's genuinely useful, and useful to teams already running sprints in CWM — a modest fraction of the customer base. That's the ceiling on anything gated behind setup: real value, delivered to the people who already paid.</p>
+
+  <div class="ns rv" data-d="4" style="margin-top:30px;border-color:var(--am);background:linear-gradient(120deg,rgba(217,119,6,.08),transparent 70%)">
+    <div class="nl">The SMB test — a constraint, not a market</div>
+    <p>If a team of <strong style="color:var(--am)">six people with no administrator</strong> can't get something useful out of it in ten minutes, it isn't finished.</p>
+  </div>
+
+  <p class="ld rv" data-d="4" style="margin-top:26px">I'd apply that to every requirement, and it holds for enterprises, because the unit that actually adopts software is never the enterprise. It's the team of eight inside the 40,000-person customer: no admin, no budget line, no patience. That team is the one paying for an external tool on someone's corporate card today, and the live displacement deals are evidence it can be won back. Whether this eventually makes a genuine mid-market motion possible is upside I'd take — not the bet I'm making here.</p>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 4: THE ONE THING CWM HAS -->
+<!-- ACT 5 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 04 — The one thing nobody else has</span></div>
-  <h2 class="rv" data-d="1">Collaboration with enterprise context.</h2>
-  <p class="ld rv" data-d="2">A board in Asana or Monday is blind. It only knows what you put on it manually. A board in CWM can see your EAP sprint, your ITSM incidents, your PPM approvals, your HR requests — because they're all in the same database. That's not an integration. That's native access.</p>
-  <p class="ld rv" data-d="2" style="margin-top:14px">But today CWM doesn't use that access for anything intelligent. Connected Work displays rows from other tables. It doesn't reason about them. <strong>The value isn't seeing your incident on a board. It's knowing that incident is blocking your sprint story and your sprint ends Thursday.</strong></p>
+  <div class="rv"><span class="ey">Act 05 — Why CWM</span></div>
+  <h2 class="rv" data-d="1">The platform should own the reasoning. CWM should own the morning.</h2>
+  <p class="ld rv" data-d="2">The hardest objection to this proposal isn't from Asana. It's internal: <em>if reasoning across ITSM, HR, PPM and EAP is valuable, it belongs to the platform — a Now Assist surface every user gets — not to a work-management app with a few thousand monthly users.</em> That objection is half right, so it's worth conceding the half that is.</p>
 
-  <div style="margin-top:38px;display:flex;flex-direction:column;gap:12px" class="rv" data-d="3">
+  <div class="card rv" data-d="2" style="margin-top:26px;border-left:3px solid var(--em)">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--em);margin-bottom:12px">Conceded</div>
+    <p style="font-size:14.5px;line-height:1.65;margin:0;color:var(--mt)">The intelligence should be built as platform capability — Now Assist skills, reusable by any consumer, owned by the platform AI team. I'm not proposing CWM build a private AI stack. The question isn't who owns the reasoning. It's <strong>where a person receives it, and where they act on it.</strong></p>
+  </div>
+
+  <h3 class="rv" data-d="3" style="margin-top:38px">Four reasons that surface is CWM</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px" class="rv" data-d="3">
+    <div class="card" style="border-top:3px solid var(--ac)"><h3 style="font-size:15px;margin-bottom:8px">01 · A briefing needs somewhere to land</h3><p style="font-size:12.5px;color:var(--md);line-height:1.6">A platform-level briefing can tell you a sprint is at risk, then deep-link you into five different apps to do something about it — which is the fragmentation it was meant to solve. CWM is the only SPM surface that already holds boards, docs and tasks, so orientation and execution sit in one place.</p></div>
+    <div class="card" style="border-top:3px solid var(--pr)"><h3 style="font-size:15px;margin-bottom:8px">02 · CWM already holds the joins</h3><p style="font-size:12.5px;color:var(--md);line-height:1.6">Integrations with <strong>Project Workspace</strong> (planned work) and <strong>EAP</strong> (sprint execution), plus Connected Work for records from any table. The insight comes from the join between planned, committed and ad-hoc work — and CWM is where those three edges already meet. A new platform surface would have to rebuild them.</p></div>
+    <div class="card" style="border-top:3px solid var(--em)"><h3 style="font-size:15px;margin-bottom:8px">03 · Nothing to displace</h3><p style="font-size:12.5px;color:var(--md);line-height:1.6">ITSM and HR users have entrenched workspaces and morning habits; changing their front door is a fight with an incumbent. CWM's low usage is the asset here — there's no first-open habit to break, which makes it the cheapest place in the portfolio to establish a new one.</p></div>
+    <div class="card" style="border-top:3px solid var(--am)"><h3 style="font-size:15px;margin-bottom:8px">04 · A quality bar you can actually hit</h3><p style="font-size:12.5px;color:var(--md);line-height:1.6">Platform-wide means every persona and every module on day one, and reasoning accuracy is the thing that kills this product. One audience, one set of joins, one accuracy target — then expand once the predictions hold.</p></div>
+  </div>
+
+  <h3 class="rv" data-d="3" style="margin-top:44px">And externally, the advantage is structural</h3>
+  <p class="ld rv" data-d="3" style="margin-top:8px">A board in Asana or Monday is blind. It knows only what you typed into it. A board in CWM can reach the sprint, the incident, the approval and the project plan because they share a database, an identity model and a permission system. That isn't an integration anyone can buy — and the value isn't seeing the incident on a board. It's knowing it blocks your sprint story and the sprint ends Thursday.</p>
+
+  <div style="margin-top:30px;display:flex;flex-direction:column;gap:12px" class="rv" data-d="4">
     <div class="card" style="border-left:3px solid var(--rd);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--rd);text-transform:uppercase">EAP + ITSM + sprint deadline</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"API migration at risk — blocking incident unresolved, sprint ends in 2 days."</div></div>
-    <div class="card" style="border-left:3px solid var(--pr);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--pr);text-transform:uppercase">Velocity + committed + history</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"You'll complete 28 of 38 points. Here are 3 to descope to hit the goal."</div></div>
-    <div class="card" style="border-left:3px solid var(--em);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--em);text-transform:uppercase">Dependency + overnight change</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"Dependency unblocked at 11pm. Pull that story into the sprint before standup."</div></div>
-    <div class="card" style="border-left:3px solid var(--am);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--am);text-transform:uppercase">Board activity + cycle time</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"This item is stuck 3× longer than your team's average. Split or reassign?"</div></div>
+    <div class="card" style="border-left:3px solid var(--pr)"><div style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--pr);text-transform:uppercase">Project Workspace + sprint scope</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"The plan moved this milestone in. Your sprint is now 3 stories short of it."</div></div></div>
+    <div class="card" style="border-left:3px solid var(--em);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--em);text-transform:uppercase">Board activity + cycle time</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"This item is stuck 3× longer than your team's average. Split or reassign?"</div></div>
   </div>
-  <p class="rv" data-d="4" style="margin-top:20px;font-size:14px;color:var(--ac);font-weight:500">Each connects 2–3 systems. No standalone tool can produce them. That's not a dashboard — that's reasoning.</p>
+  <p class="rv" data-d="4" style="margin-top:20px;font-size:14px;color:var(--ac);font-weight:500">Each one crosses two or three systems. None of them is a chart, and none of them is buildable outside this platform.</p>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 5: THE VISION -->
-<section>
-<div class="w">
-  <div class="rv"><span class="ey">Act 05 — The vision</span></div>
-  <h2 class="rv" data-d="1">Collaboration that knows your enterprise.</h2>
-  <p class="ld rv" data-d="2">CWM should stop competing with Asana and Monday on boards and docs — they'll always be good at that. CWM should compete on the one thing they can never build: <em>collaboration surfaces that are aware of your ITSM incidents, your EAP sprints, your PPM approvals, and your HR requests — natively, without integrations.</em></p>
-  <div class="ns rv" data-d="2" style="margin-top:28px">
-    <div class="nl">Vision</div>
-    <p>CWM becomes the <strong style="color:var(--ac)">morning command center</strong> for SPM users — the one place you open first because it tells you what matters across every system, and why. Start with SPM teams. Prove the value. Then expand across ServiceNow.</p>
-  </div>
-  <div class="ns rv" data-d="3" style="margin-top:14px;border-color:var(--em);background:linear-gradient(120deg,rgba(16,185,129,.06),transparent 70%)">
-    <div class="nl">North star</div>
-    <p><strong style="color:var(--em)">% of SPM users whose first app open of the day is CWM.</strong></p>
-  </div>
-  <h3 class="rv" data-d="3" style="margin-top:38px">Three principles that guide every decision</h3>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px" class="rv" data-d="3">
-    <div class="card" style="border-top:3px solid var(--ac)"><h3 style="font-size:15px;margin-bottom:8px">Context, not data</h3><p style="font-size:12.5px;color:var(--md);line-height:1.55">AI knows your role, team, sprint, and priorities — not just your task list.</p></div>
-    <div class="card" style="border-top:3px solid var(--em)"><h3 style="font-size:15px;margin-bottom:8px">Value on arrival</h3><p style="font-size:12.5px;color:var(--md);line-height:1.55">The platform already knows you. First open shows your work — not an empty board.</p></div>
-    <div class="card" style="border-top:3px solid var(--am)"><h3 style="font-size:15px;margin-bottom:8px">Reason, don't display</h3><p style="font-size:12.5px;color:var(--md);line-height:1.55">"Sprint at risk because of an ITSM incident" is a feature. "Here's your ITSM data" is plumbing.</p></div>
-  </div>
-</div>
-</section>
-<hr class="hr">
-
-<!-- ACT 6: THE PRODUCT -->
+<!-- ACT 6 -->
 <section>
 <div class="w">
   <div class="rv"><span class="ey">Act 06 — The product</span></div>
   <h2 class="rv" data-d="1">Daily Pulse.</h2>
-  <p class="ld rv" data-d="2">One product. Three questions. Every morning. Everything else CWM builds — sprint analytics, Connected Work, AI skills, search — feeds into this. They're not separate features. They're the engine behind the Pulse.</p>
+  <p class="ld rv" data-d="2">Three answers the dashboard can't give, then one thing it can't do. Each card below is what a user would actually read on screen.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px" class="rv" data-d="2">
-    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--rd);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">⚡</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">What matters right now</h3><p style="font-size:12px;color:var(--md);line-height:1.55">AI-ranked priorities with reasoning. "These 3 matter most — here's why." Each reason cites cross-system data the user couldn't see before.</p></div>
-    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--ac);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">△</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">What changed that affects your plan</h3><p style="font-size:12px;color:var(--md);line-height:1.55">Not "15 items moved state." Instead: "blocking incident resolved at 11pm — pull that story into the sprint before standup." Cause and effect across systems.</p></div>
-    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--em);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">◎</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">What's at risk before it's too late</h3><p style="font-size:12px;color:var(--md);line-height:1.55">"Sprint at 120% of velocity. Dependency cascade from Team A to Team C. Item stuck 3× normal." Predictions — not reports.</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:30px" class="rv" data-d="2">
+    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--rd);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">⚡</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">Why the line moved</h3><p style="font-size:12px;color:var(--md);line-height:1.55">Not "the sprint is behind." The three items behind it, and the reason each one moved — added scope, stalled, or blocked by something outside this board.</p></div>
+    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--ac);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">△</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">What changed overnight</h3><p style="font-size:12px;color:var(--md);line-height:1.55">Not "15 items moved state." Instead: "the blocking incident cleared at 11pm — pull that story into the sprint before standup." Cause and effect across systems.</p></div>
+    <div class="card" style="background:var(--pp);color:var(--ink);text-align:center;border:0;border-top:3px solid var(--em);padding:28px 18px"><div style="font-size:22px;margin-bottom:12px">◎</div><h3 style="color:var(--ink);font-size:17px;margin-bottom:10px">What's at risk next</h3><p style="font-size:12px;color:var(--md);line-height:1.55">"Committed above your historical velocity. Dependency cascade from Team A to Team C." Predictions, from the time series the dashboard already collects.</p></div>
+  </div>
+
+  <h3 class="rv" data-d="3" style="margin-top:44px">Then: act where you stand.</h3>
+  <p class="ld rv" data-d="3" style="margin-top:10px">Each item carries its actions inline. One click, no navigation, no form.</p>
+  <div class="rv" data-d="3" style="display:flex;flex-wrap:wrap;gap:9px;margin-top:20px">
+    <div style="font:400 12px/1 var(--mo);letter-spacing:.04em;color:var(--pp);background:var(--ink2);border:1px solid var(--ln);border-radius:999px;padding:11px 17px">Nudge the owner</div>
+    <div style="font:400 12px/1 var(--mo);letter-spacing:.04em;color:var(--pp);background:var(--ink2);border:1px solid var(--ln);border-radius:999px;padding:11px 17px">Move the date</div>
+    <div style="font:400 12px/1 var(--mo);letter-spacing:.04em;color:var(--pp);background:var(--ink2);border:1px solid var(--ln);border-radius:999px;padding:11px 17px">Split or reassign</div>
+    <div style="font:400 12px/1 var(--mo);letter-spacing:.04em;color:var(--pp);background:var(--ink2);border:1px solid var(--ln);border-radius:999px;padding:11px 17px">Capture a follow-up</div>
+    <div style="font:400 12px/1 var(--mo);letter-spacing:.04em;color:var(--pp);background:var(--ink2);border:1px solid var(--ln);border-radius:999px;padding:11px 17px">Snooze till tomorrow</div>
+  </div>
+
+  <div class="card rv" data-d="4" style="margin-top:24px;border-left:3px solid var(--em)">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--em);margin-bottom:12px">Quick capture — the smallest unit of work</div>
+    <p style="font-size:14.5px;line-height:1.65;margin:0;color:var(--mt)">One field. No project, no board, no state, no owner. Type "chase the vendor invoice" and it's on tomorrow's Pulse if it isn't done. Promote it to a board item later, only if it grows into something that deserves one.<br><br><strong>It's the only part of the product that passes the ten-minute test on day one</strong> — which is why it ships in the first phase beside the intelligence rather than after it.</p>
   </div>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 7: BEFORE AND AFTER -->
+<!-- ACT 7 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 07 — Before and after</span></div>
-  <h2 class="rv" data-d="1">Same user. Same Tuesday morning.</h2>
+  <div class="rv"><span class="ey">Act 07 — Roadmap</span></div>
+  <h2 class="rv" data-d="1">Start from what shipped. Cut the rest.</h2>
+  <p class="ld rv" data-d="2">Eight requirements, down from seventeen in the previous draft. Everything that survived either answers a morning question or makes the answer actionable. Timelines assume CWM's existing 2–3 month release cadence.</p>
 
-  <div class="ba rv" data-d="2">
-    <div class="bf">
-      <div class="bt">Today — 20+ minutes</div>
-      <h3>Five modules. No connections.</h3>
-      <div class="bi">Open email. Scan for escalations. No priority, no sprint context.</div>
-      <div class="bi">Open Slack. Check channels. Noise, no link to work items.</div>
-      <div class="bi">Open EAP. Check sprint board. Can't see the ITSM incident blocking a story.</div>
-      <div class="bi">Open ITSM module separately. Check incidents. No link to sprint impact.</div>
-      <div class="bi">Open PPM module. Check approvals. No idea which tasks they unblock.</div>
-      <div class="bi"><strong>Same platform. Five siloed views. Context built in your head. 20 minutes gone.</strong></div>
-    </div>
-    <div class="af">
-      <div class="bt">With Daily Pulse — 90 seconds</div>
-      <h3>One screen. Connected reasoning.</h3>
-      <div class="bi"><strong>"Good morning. 3 items need attention."</strong></div>
-      <div class="bi"><strong>⚠ API migration at risk</strong> — ITSM incident unresolved, sprint ends Thursday.</div>
-      <div class="bi">Auth refactor overdue 2 days. Config schema due tomorrow.</div>
-      <div class="bi">Dependency unblocked at 11pm — pull into sprint?</div>
-      <div class="bi">Sprint 14: 28/38 pts completed. Velocity ↓12%.</div>
-      <div class="bi"><strong>Tap the risk alert → opens board → reassign → done. 90 seconds.</strong></div>
-    </div>
+  <div class="ns rv" data-d="2" style="margin-top:26px">
+    <div class="nl">Vision</div>
+    <p>CWM becomes the <strong style="color:var(--ac)">morning surface</strong> for SPM users — opened first because it says what matters across every system, why, and what to do about it.</p>
   </div>
-</div>
-</section>
-<hr class="hr">
-
-<!-- ACT 8: HOW FEATURES CONNECT -->
-<section>
-<div class="w">
-  <div class="rv"><span class="ey">Act 08 — How the pieces connect</span></div>
-  <h2 class="rv" data-d="1">Every feature feeds the Pulse.</h2>
-  <p class="ld rv" data-d="2">These aren't separate features to ship and celebrate individually. They're infrastructure. Each one makes the Daily Pulse smarter. Without them, the Pulse can't reason. With them, it can.</p>
-
-  <div class="fc rv" data-d="2">
-    <div class="fl">
-      <div class="fi"><b>Connected Work</b><br>Pulls ITSM, HR, PPM data onto boards</div>
-      <div class="fi"><b>EAP sync</b><br>Stories, epics, sprints from agile planning</div>
-      <div class="fi"><b>Sprint analytics</b><br>Burndown, velocity from time-series snapshots</div>
-      <div class="fi"><b>Platform identity</b><br>Your role, team, assignments, permissions</div>
-      <div class="fi"><b>AI skills framework</b><br>Now Assist skills with event-triggered configs</div>
-    </div>
-    <div class="fa"><span>→</span><span>→</span><span>→</span><small>feeds</small></div>
-    <div class="fp"><div class="fpn"><b>Daily Pulse</b></div><div class="fps">Cross-system reasoning<br>delivered every morning</div></div>
+  <div class="ns rv" data-d="2" style="margin-top:14px;border-color:var(--em);background:linear-gradient(120deg,rgba(16,185,129,.06),transparent 70%)">
+    <div class="nl">North star</div>
+    <p><strong style="color:var(--em)">% of SPM users whose first app open of the day is CWM.</strong></p>
   </div>
 
-  <p class="rv" data-d="3" style="margin-top:24px;font-size:14px;border-left:2px solid var(--em);padding-left:16px;max-width:56ch;color:var(--mt)">My Space hosts the Pulse (orientation). Boards host the work (execution). The Pulse links directly to the board and item that needs attention. You come to CWM for the Pulse. You stay for the board.</p>
-</div>
-</section>
-<hr class="hr">
-
-<!-- ACT 9: ROADMAP -->
-<section>
-<div class="w">
-  <div class="rv"><span class="ey">Act 09 — Roadmap</span></div>
-  <h2 class="rv" data-d="1">Each phase makes the Pulse smarter.</h2>
-  <p class="ld rv" data-d="2">Three phases — the same ones in the PRD. Timelines assume CWM's existing 2–3 month release cadence.</p>
-
-  <div class="rg rv" data-d="2">
-    <div class="card rc"><div class="rt" style="background:var(--ac)">Phase 1</div><div class="rtm">~1 quarter</div><h3>Board-level intelligence</h3>
-      <div class="ri">AI-ranked priority list</div>
-      <div class="ri">Overnight diff across boards</div>
-      <div class="ri">Sprint metrics — burndown + velocity</div>
-      <div class="ri">Tap-to-navigate deep links</div>
-      <div class="ri">Daily push notification</div>
+  <div class="rg rv" data-d="3" style="margin-top:34px">
+    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--md)">Shipped</div><div class="rtm">last ~6 months</div><h3>Measurement</h3>
+      <div class="ri">Daily sprint snapshot job</div>
+      <div class="ri">Burndown vs ideal line</div>
+      <div class="ri">Scope change, progress by status</div>
+      <div class="ri" style="border-color:var(--em);color:var(--mt)">The foundation everything below needs</div>
+    </div>
+    <div class="card rc"><div class="rt" style="background:var(--ac)">Phase 1</div><div class="rtm">~1 quarter</div><h3>Judgment &amp; capture</h3>
+      <div class="ri">Why the line moved</div>
+      <div class="ri">Ranked priorities, each with its reason</div>
+      <div class="ri">Overnight diff</div>
+      <div class="ri">Act in place</div>
+      <div class="ri">Quick capture</div>
     </div>
     <div class="card rc"><div class="rt" style="background:var(--pr)">Phase 2</div><div class="rtm">~1–2 quarters</div><h3>Cross-system reasoning</h3>
-      <div class="ri">Cross-system impact alerts (ITSM / PPM / cross-board)</div>
-      <div class="ri">Sprint overload prediction</div>
-      <div class="ri">Role-aware views</div>
+      <div class="ri">Cross-system impact alerts</div>
+      <div class="ri">Overload prediction</div>
+      <div class="ri">Follow-ups that resurface until closed</div>
     </div>
-    <div class="card rc"><div class="rt" style="background:var(--em)">Phase 3</div><div class="rtm">~2 quarters</div><h3>Agents &amp; autonomy</h3>
-      <div class="ri">Stale-item agent</div>
-      <div class="ri">Descope recommendation</div>
+    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--rd)">Cut</div><div class="rtm">not now</div><h3>Deferred</h3>
+      <div class="ri">Role-aware views</div>
       <div class="ri">Semantic search</div>
       <div class="ri">AI status generation</div>
+      <div class="ri">Autonomous agents, descope bot</div>
+      <div class="ri" style="border-color:var(--rd);color:var(--mt)">Each needs setup or trust we haven't earned</div>
     </div>
   </div>
+
+  <div class="note rv" data-d="3" style="border-left-color:var(--am)">
+    <div class="nt">What this costs, and what I'd defund</div>
+    <p>One quarter of CWM Core and Agile capacity. It competes directly with broadening Connected Work and with net-new board features, and I'd hold both. <strong>Role-aware views, semantic search and AI status generation come out of the plan entirely</strong> — each needs configuration or a trust level we haven't earned. And if capacity allowed only one requirement, it's <strong>why the line moved</strong>. Everything else in Phase 1 is worth nothing if that answer is wrong, and the two-week research plan in Act 03 exists to test exactly that before the quarter is committed.</p>
+  </div>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 10: METRICS -->
+<!-- ACT 8 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 10 — Metrics</span></div>
-  <h2 class="rv" data-d="1">How we know it's working.</h2>
+  <div class="rv"><span class="ey">Act 08 — Metrics</span></div>
+  <h2 class="rv" data-d="1">Two measures of success. Two that would stop it.</h2>
 
   <div class="mg rv" data-d="2">
-    <div class="card mc"><div class="ml" style="color:var(--ac)">Activation</div><div class="mv">&lt;2<i>min</i></div><div class="mb"><i style="--fl:85%"></i></div><div class="mh">Time from first open to cross-system insight.</div><div class="mx">Benchmark: Notion onboarding ~5 min. We target 2.</div></div>
-    <div class="card mc"><div class="ml" style="color:var(--em)">Daily habit</div><div class="mv">1st<i>hour</i></div><div class="mb"><i style="--fl:70%"></i></div><div class="mh">% of WAU opening CWM in first hour of workday.</div><div class="mx">Benchmark: Slack morning open rate ~65% of DAU.</div></div>
-    <div class="card mc"><div class="ml" style="color:var(--am)">Retention</div><div class="mv">&gt;40<i>%</i></div><div class="mb"><i style="--fl:60%"></i></div><div class="mh">Week-4 retention — activated users still active day 28.</div><div class="mx">Benchmark: Enterprise SaaS avg ~35%. 40% = top quartile.</div></div>
-    <div class="card mc"><div class="ml" style="color:var(--pr)">Intelligence</div><div class="mv">&gt;70<i>%</i></div><div class="mb"><i style="--fl:75%"></i></div><div class="mh">Risk predictions confirmed by sprint outcome.</div><div class="mx">Benchmark: Threshold for user trust in AI recommendations.</div></div>
-  </div>
-  <div class="ns rv" data-d="3">
-    <div class="nl">North star</div>
-    <p>% of SPM users whose <strong style="color:var(--ac)">first app open of the day</strong> is CWM.</p>
+    <div class="card mc"><div class="ml" style="color:var(--ac)">Orientation</div><div class="mv">&lt;90<i>sec</i></div><div class="mb"><i style="--fl:85%"></i></div><div class="mh">Open to first action on a Pulse item — the instrumentable proxy for "I know what to change."</div><div class="mx">The dashboard already delivers "something is off." This measures the rest.</div></div>
+    <div class="card mc"><div class="ml" style="color:var(--em)">Zero-config value</div><div class="mv">&gt;60<i>%</i></div><div class="mb"><i style="--fl:60%"></i></div><div class="mh">Share of Pulse items a brand-new team sees before configuring anything.</div><div class="mx">The SMB test as a number. Below 60%, the tax is still being paid.</div></div>
+    <div class="card mc" style="border-left:3px solid var(--rd)"><div class="ml" style="color:var(--rd)">Counter-metric · trust</div><div class="mv">&lt;10<i>%</i></div><div class="mb"><i style="--fl:10%"></i></div><div class="mh">Pulse items dismissed or muted, with prediction accuracy held above 70%.</div><div class="mx">The kill signal. Below the accuracy bar, ship the chart and stop claiming judgment.</div></div>
+    <div class="card mc" style="border-left:3px solid var(--rd)"><div class="ml" style="color:var(--rd)">Counter-metric · the loop</div><div class="mv">&gt;35<i>%</i></div><div class="mb"><i style="--fl:35%"></i></div><div class="mh">Items acted on inside CWM rather than elsewhere; captured items closed rather than abandoned.</div><div class="mx">Low numbers here mean we built a newsletter and a second inbox.</div></div>
   </div>
 </div>
 </section>
 <hr class="hr">
 
-<!-- ACT 11: HARD CALLS -->
+<!-- ACT 9 -->
 <section>
 <div class="w">
-  <div class="rv"><span class="ey">Act 11 — The hard calls</span></div>
+  <div class="rv"><span class="ey">Act 09 — The hard calls</span></div>
   <h2 class="rv" data-d="1">Three objections this would face in its first review.</h2>
 
   <div class="hc rv" data-d="2">
-    <div class="card hci"><div class="hq"><span class="hn">01</span><div class="hqt">"Sprint analytics don't even exist yet. Why build AI on top?"</div></div>
-      <div class="hb"><div class="hcl"><span class="ht">The tension</span>CWM doesn't have burndown charts or velocity. EAP has more mature sprint tools. Proposing intelligence before fixing foundations feels like putting the roof on before the walls.</div><div class="hcl"><span class="ht">Where I land</span><strong>The roadmap addresses this.</strong> P1 ships sprint analytics before P3 ships cross-system reasoning. Foundation first. But the vision must be set now — otherwise P1 becomes "catch up to EAP" instead of "build toward something EAP can never do on its own."</div></div>
+    <div class="card hci"><div class="hq"><span class="hn">01</span><div class="hqt">"The dashboard just shipped. Isn't this the same thing with AI on top?"</div></div>
+      <div class="hb"><div class="hcl"><span class="ht">The tension</span>Burndown, scope change and progress by status already tell a team how work is tracking. A briefing layer arriving months later can read as a wrapper around a feature the team just built — or worse, a second surface answering the same question.</div><div class="hcl"><span class="ht">Where I land</span><strong>The dashboard is the substrate, not the competition.</strong> It answers "how are we doing," and nobody's morning ends there. What follows is why the line moved, what's blocking those items outside this board, and what to change before standup — which needs cause and effect across modules a chart can't reach. It also built the daily snapshots every prediction depends on. The hardest prerequisite is already done, and the Pulse embeds the dashboard rather than competing with it.</div></div>
     </div>
-    <div class="card hci"><div class="hq"><span class="hn">02</span><div class="hqt">"If nobody uses CWM now, why build a new surface on top of it?"</div></div>
-      <div class="hb"><div class="hcl"><span class="ht">The tension</span>CWM adoption is still early. Building Daily Pulse means investing in a surface on top of an underused product. That's a bet on a bet.</div><div class="hcl"><span class="ht">Where I land</span><strong>The Pulse IS the adoption mechanism.</strong> Today's onboarding fails because it asks users to build boards before seeing value. The Pulse inverts this — it shows value on day 1 using data that already exists. Users discover boards through Pulse insights, not through a template picker.</div></div>
+    <div class="card hci"><div class="hq"><span class="hn">02</span><div class="hqt">"Zero configuration isn't possible here. Permissions and licensing decide what a user can see."</div></div>
+      <div class="hb"><div class="hcl"><span class="ht">The tension</span>ACLs and role-based access are why the platform is configuration-heavy. A Pulse that surfaces an ITSM incident to a scrum master with no ITSM role either leaks data or shows an empty state. Entitlements compound it — seeing records from a module can require a licence for that module. "Make it the default" doesn't survive contact with either.</div><div class="hcl"><span class="ht">Where I land</span><strong>Two tiers, and the summary tier is the product.</strong> A Pulse item states the fact and the impact — "blocked by an unresolved incident, sprint ends Thursday" — derived server-side and requiring no source-table permission, because it exposes no record data. The record itself, and the deep link to it, appear only for users whose existing role and entitlement already allow it; everyone else sees the impact and who to ask. That keeps first value free of setup without inventing an access path the platform doesn't sanction. It's the requirement I'd validate with a platform architect before anything else.</div></div>
     </div>
-    <div class="card hci"><div class="hq"><span class="hn">03</span><div class="hqt">"Isn't this just a notification feed dressed up as intelligence?"</div></div>
-      <div class="hb"><div class="hcl"><span class="ht">The tension</span>ServiceNow already has notifications. Email already tells you when things change. A "what changed" feed risks becoming noise that users mute.</div><div class="hcl"><span class="ht">Where I land</span><strong>The difference is reasoning.</strong> Email says "incident updated." The Pulse says "this incident blocks your sprint story, and your sprint ends Thursday — escalate now." The connection between systems is the value. If users mute it, we failed at reasoning quality, not the concept.</div></div>
+    <div class="card hci"><div class="hq"><span class="hn">03</span><div class="hqt">"ServiceNow is enterprise software. A team of six isn't our customer."</div></div>
+      <div class="hb"><div class="hcl"><span class="ht">The tension</span>Seat economics, partner-led implementation and a configuration-first heritage all point away from lightweight self-serve. Designing to a ten-minute bar looks like designing for a segment we don't sell to, and invites the question of whether this is a mid-market strategy nobody asked for.</div><div class="hcl"><span class="ht">Where I land</span><strong>SMB here is a constraint, not a market.</strong> The unit that adopts software is never the enterprise — it's the team of eight inside the 40,000-seat customer, with no admin and no patience, already paying for an external tool on a corporate card. Designing for that team is how we win back accounts being lost inside our own installed base, and the live displacement deals show it's winnable. If it later makes a genuine mid-market motion possible, I'd take the upside. I'm not claiming it here.</div></div>
     </div>
   </div>
 </div>
@@ -440,7 +478,7 @@ footer .fm span{color:var(--ac)}
   <p class="rv" style="font:300 clamp(26px,4.5vw,48px)/1.08 var(--se);color:var(--md)">Any tool can give you boards and docs.</p>
   <p class="rv" data-d="1" style="font:300 clamp(26px,4.5vw,48px)/1.08 var(--se);color:var(--pp);margin-top:6px">Only CWM can make them <span style="color:var(--ac);font-style:italic">aware</span></p>
   <p class="rv" data-d="2" style="font:300 clamp(26px,4.5vw,48px)/1.08 var(--se);color:var(--pp);margin-top:6px">of your entire enterprise.</p>
-  <p class="rv" data-d="3" style="margin-top:26px;font-size:15px;color:var(--md);max-width:44ch;margin-left:auto;margin-right:auto">Because it sits on the same platform as your incidents, approvals, sprints, and team data. That's not an integration. That's a moat.</p>
+  <p class="rv" data-d="3" style="margin-top:26px;font-size:15px;color:var(--md);max-width:48ch;margin-left:auto;margin-right:auto">The measurement layer is built. Judgment is the layer no standalone tool can copy and no other surface is positioned to deliver — because CWM sits on the same database as your incidents and approvals, and already joins your plans to your sprints. That's not an integration. That's a moat.</p>
 </div>
 </section>
 <hr class="hr">
@@ -448,20 +486,23 @@ footer .fm span{color:var(--ac)}
 <!-- REFERENCES -->
 <section style="padding:clamp(48px,7vw,90px) 0">
 <div class="w">
-  <div class="rv"><span class="ey">References</span></div>
-  <h2 class="rv" data-d="1" style="font-size:clamp(24px,3.4vw,34px)">Where the numbers come from.</h2>
+  <div class="rv"><span class="ey">Sources &amp; method</span></div>
+  <h2 class="rv" data-d="1" style="font-size:clamp(24px,3.4vw,34px)">Where this comes from.</h2>
   <ol class="rv" data-d="2" style="margin:22px 0 0 20px;font-size:14px;line-height:1.65;color:var(--mt)">
+    <li style="margin:11px 0">First-hand product experience: 2.5 years as a software engineer on CWM across four SPM teams, and 50+ customer case tasks in the PPM and Project Workspace domain, including escalation root-cause triage.</li>
     <li style="margin:11px 0">Harvard Business Review (2022), <em>"How Much Time and Energy Do We Waste Toggling Between Applications?"</em> — digital workers switch apps ~1,200 times a day and lose ~4 hours a week reorienting.</li>
-    <li style="margin:11px 0">Cornell University &amp; Qatalog, <em>Workgeist Report</em> — it takes ~9.5 minutes on average to return to a productive flow after switching apps.</li>
-    <li style="margin:11px 0">Dr. Gloria Mark, University of California, Irvine — research on interruption and attention; ~23 minutes to fully refocus after an interruption.</li>
-    <li style="margin:11px 0">ServiceNow CWM business data (May 2026) and competitive review across Monday.com, Asana, Atlassian, Linear, and Notion.</li>
+    <li style="margin:11px 0">Cornell University &amp; Qatalog, <em>Workgeist Report</em> — ~9.5 minutes on average to return to productive flow after switching apps.</li>
+    <li style="margin:11px 0">Dr. Gloria Mark, University of California, Irvine — research on interruption and attention.</li>
+    <li style="margin:11px 0">Competitive review across Monday.com, Asana, Atlassian, Linear and Notion.</li>
+    <li style="margin:11px 0">Directional commercial context from an internal product review. <strong>All figures are presented as ratios, ranges or directions of travel rather than absolute values</strong>, and no customer, deal or vertical is identified. The argument does not depend on the precise numbers.</li>
   </ol>
+  <p class="rv" data-d="2" style="margin-top:20px;font-size:13.5px;color:var(--md);max-width:60ch">No structured user interviews have been run. Act 03 sets out the two-week plan that would close that gap and the finding that would falsify the thesis.</p>
 </div>
 </section>
 
 <footer>
 <div class="w"><div class="fr">
-  <div class="fn">Based on 2.5 years as a software engineer on CWM across four SPM teams, CWM business data (May 2026), and competitive intelligence across Monday.com, Asana, Atlassian, Linear, and Notion.</div>
+  <div class="fn">Based on 2.5 years as a software engineer on CWM across four SPM teams, customer support work in the PPM and Project Workspace domain, the product's 2026 releases, and competitive review across Monday.com, Asana, Atlassian, Linear and Notion. Commercial figures generalized throughout.</div>
   <div class="fm">Vipasha <span>· 2026</span></div>
 </div></div>
 </footer>
