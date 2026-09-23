@@ -247,26 +247,45 @@ footer .fm span{color:var(--ac)}
 <section>
 <div class="w">
   <div class="rv"><span class="ey">Act 03 — Research</span></div>
-  <h2 class="rv" data-d="1">How I formed this view — and what would change it.</h2>
-  <p class="ld rv" data-d="2">Five sources, and one gap I'd rather name than paper over.</p>
+  <h2 class="rv" data-d="1">Where this comes from, and what would change it.</h2>
+  <p class="ld rv" data-d="2">Two gaps, argued from four sources and one piece of desk research — plus the work I haven't done.</p>
 
+  <h3 class="rv" data-d="2" style="margin-top:34px">What I looked at</h3>
   <div class="jmap keep rv" data-d="2">
-    <div class="jm"><div class="ja">Building the product, 2.5 years</div><div class="jq">Five core UI surfaces across four SPM teams, including sprint metrics and the agile components.</div></div>
-    <div class="jm"><div class="ja">50+ customer case tasks</div><div class="jq">PPM and Project Workspace domain — real customer problems, in their own words, in writing.</div></div>
-    <div class="jm"><div class="ja">Escalation root-cause triage</div><div class="jq">Around a quarter traced to product behaviour diverging from user expectation, not misconfiguration.</div></div>
-    <div class="jm"><div class="ja">Adoption data, adjacent AI feature</div><div class="jq">A sharp drop after launch in another SPM product. Shipping an AI surface and having it used are different problems.</div></div>
-    <div class="jm"><div class="ja">Market and competitor evidence</div><div class="jq">Documented view proliferation and configuration cost across ClickUp, Jira and Linear; vendor admin analytics that report seats and activity but never view behaviour.</div></div>
+    <div class="jm"><div class="ja">2.5 years building CWM</div><div class="jq">Five core UI surfaces across four SPM teams, including the sprint metrics and agile components.</div></div>
+    <div class="jm"><div class="ja">50+ customer case tasks</div><div class="jq">PPM and Project Workspace domain — customer problems in their own words, in writing.</div></div>
+    <div class="jm"><div class="ja">Escalation root-cause triage</div><div class="jq">Around a quarter traced to product behaviour diverging from what the user expected.</div></div>
+    <div class="jm"><div class="ja">Adoption data, adjacent AI feature</div><div class="jq">A sharp drop after launch in another SPM product.</div></div>
+    <div class="jm"><div class="ja">Desk research on the category</div><div class="jq">Published reviews of ClickUp, Jira and Linear on view and configuration cost; vendor admin analytics that report seats but never view usage.</div></div>
   </div>
 
-  <p class="ld rv" data-d="3" style="margin-top:26px">The escalation finding is the one that shaped this most. When configuration divergence is the single most common root cause of customer pain, the problem isn't that the product can't be shaped to the customer. It's that value is <strong>contingent on someone shaping it</strong> — which is the argument in Act 04. It came from support data, not from a whiteboard.</p>
-  <p class="ld rv" data-d="3" style="margin-top:14px">The adoption drop is the counterweight. It's the reason this proposal treats trust and accuracy as kill criteria rather than as polish, and why two of the four success metrics are counter-metrics.</p>
+  <h3 class="rv" data-d="3" style="margin-top:40px">The two findings that shaped the proposal</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:16px" class="rv" data-d="3">
+    <div class="card" style="border-top:3px solid var(--am)">
+      <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:11px">Became Gap 02</div>
+      <p style="font-size:13.5px;line-height:1.65;margin:0;color:var(--mt)">Configuration divergence was the most common root cause in the escalations I triaged. The problem isn't that the product can't be shaped to a customer. It's that its value is <strong>contingent on someone shaping it</strong> — and because that shaping is self-serve, the person doing it is the end user.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--rd)">
+      <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--rd)">Became the counter-metrics</div>
+      <p style="font-size:13.5px;line-height:1.65;margin:11px 0 0;color:var(--mt)">An AI feature in an adjacent SPM product lost adoption sharply after launch. Shipping an AI surface and having it used are different problems, which is why trust and accuracy are treated here as <strong>kill criteria rather than polish</strong>.</p>
+    </div>
+  </div>
 
-  <div class="card rv" data-d="4" style="margin-top:30px;border-left:3px solid var(--am)">
-    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:12px">The gap — and the two weeks that would close it</div>
-    <p style="font-size:14.5px;line-height:1.7;margin:0;color:var(--mt)">I have not run structured interviews with delivery leads. Everything here is grounded in support data, product knowledge and secondary research, which is enough to form a thesis and not enough to bet a roadmap on. Before writing a line of code I'd spend two weeks and no engineering time on this:<br><br>
-    <strong>Who:</strong> 8–10 scrum masters and delivery leads across three customers already running sprints in CWM, plus three teams that left for an external tool.<br><br>
-    <strong>What I'd ask:</strong> What did you open first this morning, and why? What did you do in the ten minutes after seeing the burndown off track? Where do your untracked follow-ups live right now? When did you last configure something in CWM, and who actually did it? What would make you stop paying for the other tool? Then three on the workspace itself: <em>predict your most-used view before I show you the data</em>; which of the two dashboards do you think of as yours; and how do you actually decide who gets which story?<br><br>
-    <strong>What would falsify this:</strong> if leads tell me the dashboard is sufficient, or that they'd rather act on the sprint inside EAP than inside CWM, then the judgment layer is the wrong bet and the money belongs in the Project Workspace and EAP integrations instead. I'd want to know that in week two, not in quarter three.</p>
+  <h3 class="rv" data-d="4" style="margin-top:40px">What I haven't done</h3>
+  <p class="ld rv" data-d="4" style="margin-top:8px">No structured interviews with delivery leads. What's above is enough to form a thesis and not enough to commit a roadmap. Two weeks, no engineering time, before a line of code.</p>
+
+  <div class="card rv" data-d="4" style="margin-top:18px;border-left:3px solid var(--am)">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:12px">Who</div>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 20px;color:var(--mt)">8–10 scrum masters and delivery leads across three customers already running sprints in CWM, plus three teams that left for an external tool.</p>
+
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:10px">What I'd ask — on Gap 01</div>
+    <div style="font-size:14px;line-height:1.6;color:var(--mt);margin-bottom:18px">What did you open first this morning, and why?<br>What did you do in the ten minutes after seeing the burndown off track?</div>
+
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:10px">What I'd ask — on Gap 02</div>
+    <div style="font-size:14px;line-height:1.6;color:var(--mt);margin-bottom:18px">When did you last change a board's view, columns or lanes — and why?<br>Predict your most-used view, before I show you the telemetry.<br>Which of the two dashboards do you think of as yours?</div>
+
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--rd);margin-bottom:10px">What would falsify it</div>
+    <p style="font-size:14px;line-height:1.6;margin:0;color:var(--mt)">If leads say the dashboard is sufficient, or that they would rather act on the sprint inside EAP than inside CWM, the judgment layer is the wrong bet and the money belongs in the Project Workspace and EAP integrations instead. I'd want to know that in week two, not in quarter three.</p>
   </div>
 </div>
 </section>
@@ -348,20 +367,29 @@ footer .fm span{color:var(--ac)}
 
   <p class="ld rv" data-d="4" style="margin-top:22px">That holds for enterprises too, because the unit that adopts software is never the enterprise. It is the team of eight inside the 40,000-person customer: no budget line, no mandate, and no patience for a settings panel. That team is already paying for an external tool on someone's corporate card, and the live displacement deals show it can be won back.</p>
 
-  <h3 class="rv" data-d="4" style="margin-top:44px">Both gaps, mapped to what ships.</h3>
-  <div class="tw rv" data-d="4" style="margin-top:14px;overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:13.5px">
-      <thead><tr style="text-align:left">
-        <th style="padding:11px 12px;border-bottom:1px solid var(--ln);font:700 9.5px/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;color:var(--md)">Gap</th>
-        <th style="padding:11px 12px;border-bottom:1px solid var(--ln);font:700 9.5px/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;color:var(--md)">What fixes it</th>
-        <th style="padding:11px 12px;border-bottom:1px solid var(--ln);font:700 9.5px/1 var(--mo);letter-spacing:.1em;text-transform:uppercase;color:var(--md)">When</th>
-      </tr></thead>
-      <tbody style="color:var(--mt)">
-        <tr><td style="padding:12px;border-bottom:1px solid var(--ln);color:var(--pp);font-weight:500">01 · No diagnosis</td><td style="padding:12px;border-bottom:1px solid var(--ln)">FR-1 why the line moved · FR-2 ranked priorities with reasons · FR-3 overnight diff · FR-4 act in place · FR-6 cross-system cause</td><td style="padding:12px;border-bottom:1px solid var(--ln);font-family:var(--mo);font-size:12px">P1 · P2</td></tr>
-        <tr><td style="padding:12px;color:var(--pp);font-weight:500">02 · Configuration first</td><td style="padding:12px">FR-12 suggested setup · FR-9 view intent · one dashboard, not two · the SMB test on every requirement · zero-config metric</td><td style="padding:12px;font-family:var(--mo);font-size:12px">P1 · P2</td></tr>
-      </tbody>
-    </table>
+  <h3 class="rv" data-d="4" style="margin-top:44px">What ships against each gap.</h3>
+
+  <div class="rv" data-d="4" style="margin-top:22px">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);padding-bottom:4px;border-bottom:1px solid var(--pp)">Gap 01 — No diagnosis</div>
+    <div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-1</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">Why the line moved</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-2</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">Ranked priorities, each with its reason</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-3</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">Overnight diff</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-4</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">Act in place</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-6</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">Cross-system cause and impact chain</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 2</div></div>
+    </div>
   </div>
+
+  <div class="rv" data-d="4" style="margin-top:22px">
+    <div style="font:700 10px/1 var(--mo);letter-spacing:.12em;text-transform:uppercase;color:var(--am);padding-bottom:4px;border-bottom:1px solid var(--pp)">Gap 02 — Configuration first</div>
+    <div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-12</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">The panel proposes the setup instead of asking</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">FR-9</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">View intent — the surface follows the work</div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 2</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;border-bottom:1px solid var(--ln);"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">—</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">One dashboard, not two <span style="color:var(--md);font-size:12.5px">· architectural decision, Act 07</span></div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">Phase 1</div></div>
+      <div style="display:flex;align-items:baseline;gap:0;padding:13px 0;"><div style="flex:0 0 58px;font:400 11px/1.3 var(--mo);color:var(--md)">—</div><div style="flex:1 1 auto;color:var(--pp);font-size:14px;line-height:1.45;padding-right:14px">The SMB test <span style="color:var(--md);font-size:12.5px">· constraint on every requirement, measured in Act 09</span></div><div style="flex:0 0 62px;font:400 11px/1.3 var(--mo);color:var(--md);text-align:right">All</div></div>
+    </div>
+  </div>
+
 </div>
 </section>
 <hr class="hr">
@@ -387,17 +415,17 @@ footer .fm span{color:var(--ac)}
     <div class="card" style="border-top:3px solid var(--am)"><h3 style="font-size:15px;margin-bottom:8px">03 · A quality bar you can actually hit</h3><p style="font-size:12.5px;color:var(--md);line-height:1.6">Platform-wide means every persona and every module on day one, and reasoning accuracy is the thing that kills this product. One audience, one set of joins, one accuracy target — then expand once the predictions hold.</p></div>
   </div>
 
-  <p class="rv" data-d="3" style="margin-top:26px;font-size:15px;color:var(--ac);font-weight:500;border-left:2px solid var(--ac);padding-left:16px;max-width:54ch">The platform should own the reasoning. CWM should own the morning.</p>
+  <p class="rv" data-d="3" style="margin-top:28px;font:300 clamp(19px,2.3vw,26px)/1.3 var(--se);color:var(--pp);border-left:2px solid var(--ac);padding-left:18px">The platform should own the reasoning.<br><span style="color:var(--ac)">CWM should own the morning.</span></p>
 
-  <h3 class="rv" data-d="3" style="margin-top:44px">And externally, the advantage is structural</h3>
-  <p class="ld rv" data-d="3" style="margin-top:8px">A board in Asana or Monday is blind. It knows only what you typed into it. A board in CWM can reach the sprint, the incident, the approval and the project plan because they share a database, an identity model and a permission system. That isn't an integration anyone can buy — and the value isn't seeing the incident on a board. It's knowing it blocks your sprint story and the sprint ends Thursday.</p>
+  <h3 class="rv" data-d="3" style="margin-top:44px">What the joins actually produce</h3>
+  <p class="ld rv" data-d="3" style="margin-top:8px">Not more records on a board. Sentences a lead can act on, each one assembled from systems that would otherwise be read separately.</p>
 
   <div style="margin-top:30px;display:flex;flex-direction:column;gap:12px" class="rv" data-d="4">
     <div class="card" style="border-left:3px solid var(--rd);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--rd);text-transform:uppercase">EAP + ITSM + sprint deadline</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"API migration at risk — blocking incident unresolved, sprint ends in 2 days."</div></div>
     <div class="card" style="border-left:3px solid var(--pr)"><div style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--pr);text-transform:uppercase">Project Workspace + sprint scope</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"The plan moved this milestone in. Your sprint is now 3 stories short of it."</div></div></div>
     <div class="card" style="border-left:3px solid var(--em);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center"><div><div style="font:400 9.5px/1 var(--mo);letter-spacing:.06em;color:var(--em);text-transform:uppercase">Board activity + cycle time</div></div><div style="font:300 clamp(15px,1.6vw,18px)/1.3 var(--se);color:var(--pp);font-style:italic">"This item is stuck 3× longer than your team's average. Split or reassign?"</div></div>
   </div>
-  <p class="rv" data-d="4" style="margin-top:20px;font-size:14px;color:var(--ac);font-weight:500">Each one crosses two or three systems. None of them is a chart, and none of them is buildable outside this platform.</p>
+  <p class="rv" data-d="4" style="margin-top:20px;font-size:14px;color:var(--ac);font-weight:500">Each one crosses two or three systems, and none of them is a chart.</p>
 </div>
 </section>
 <hr class="hr">
