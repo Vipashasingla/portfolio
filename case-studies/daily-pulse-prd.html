@@ -99,7 +99,7 @@ td.ai{color:var(--mt);font-size:13px}
 
     <div class="tldr">
       <div><b>Problem</b>The new sprint dashboard says a sprint is slipping, not why. And CWM offers List, Kanban and Gantt without telling users which one their current stage of work needs.</div>
-      <div><b>Solution</b><strong>Daily Pulse</strong> (DP-1 to DP-5) explains, forecasts and offers fixes across modules. <strong>Stage-aware views</strong> (SV-1 to SV-5) detect the stage of work and open the right view, already set up.</div>
+      <div><b>Solution</b><strong>Daily Pulse</strong> explains, forecasts and offers fixes across modules. <strong>Stage-aware views</strong> detect the stage of work and open the right view, already set up.</div>
       <div><b>Why CWM</b>It shares a database with the incidents, approvals and plans that cause slips, and already joins Project Workspace, EAP and Connected Work.</div>
       <div><b>Success</b>North star: % of SPM users whose first app open of the day is CWM. Kill signal: Pulse cause accuracy under 70%.</div>
     </div>
@@ -120,7 +120,7 @@ td.ai{color:var(--mt);font-size:13px}
       <a href="#oq">Open questions</a> ·
       <a href="#research">Research</a>
     </p>
-    <div class="call"><span class="lbl">What changed in v7.0</span>Requirements cut from eleven to <strong>ten, five per gap</strong>, renumbered DP-1–5 (Daily Pulse) and SV-1–5 (Stage-aware Views). Gap 02 is restated: CWM already has List, Kanban and Gantt; the problem is that users aren't told which one fits which stage. Every requirement now states why it needs AI rather than a query. The two-dashboard question is decided: the Pulse <strong>replaces</strong> the personal dashboard. Distribution signals and admin view-usage reporting are cut. The withdrawn "work too small for a board" problem is removed from the problem statement.</div>
+    <div class="call"><span class="lbl">What changed in v7.0</span>Requirements cut from eleven to <strong>ten, five per gap</strong>, grouped under Daily Pulse and Stage-aware Views, and labelled by priority instead of ID codes. Gap 02 is restated: CWM already has List, Kanban and Gantt; the problem is that users aren't told which one fits which stage. Every requirement now states why it needs AI rather than a query. The two-dashboard question is decided: the Pulse <strong>replaces</strong> the personal dashboard. Distribution signals and admin view-usage reporting are cut. The withdrawn "work too small for a board" problem is removed from the problem statement.</div>
   </header>
 
   <!-- PROBLEM -->
@@ -196,28 +196,28 @@ td.ai{color:var(--mt);font-size:13px}
 
     <h3><span class="gt a">01</span>Daily Pulse</h3>
     <div class="tw"><table>
-      <thead><tr><th>ID</th><th>Requirement</th><th>Acceptance criteria</th><th>Why AI</th><th>Phase</th></tr></thead>
+      <thead><tr><th>Priority</th><th>Requirement</th><th>Acceptance criteria</th><th>Why AI</th></tr></thead>
       <tbody>
-        <tr><td class="idc">DP-1</td><td><strong>Why the line moved.</strong> Names the items behind the gap and the cause of each.</td><td>For a sprint &gt;10% above ideal, names up to 3 items and tags each: added scope, stalled, blocked, or under-estimated. Quotes and links the source. ≥70% cause accuracy in pilot review.</td><td class="ai">The cause is usually written in a work note or comment, not stored in a field.</td><td><span class="p p0">Ph 1 · P0</span></td></tr>
-        <tr><td class="idc">DP-2</td><td><strong>Unlinked blockers.</strong> Finds records outside the board that block a sprint item but were never linked.</td><td>Proposes a link when an open incident, change or approval shares a CMDB service with a sprint item and their text matches. Shows both records and the reason. Never links without user confirmation.</td><td class="ai">Matching two records by meaning and shared service, not by an explicit reference.</td><td><span class="p p1">Ph 2 · P1</span></td></tr>
-        <tr><td class="idc">DP-3</td><td><strong>Sprint forecast.</strong> A likely landing range for the sprint.</td><td>Daily range (e.g. 31–34 of 38 points) from ≥3 sprints of team snapshot history. Names the 2 items driving the risk. Hidden when history is insufficient.</td><td class="ai">Learned from this team's cycle time by item type, item age and estimate error.</td><td><span class="p p1">Ph 2 · P1</span></td></tr>
-        <tr><td class="idc">DP-4</td><td><strong>Rescue options.</strong> Ways to recover when the forecast falls short.</td><td>Offers 2–3 options. Each states what moves, which items depend on it, and the impact on the plan milestone. Nothing changes until the user picks one.</td><td class="ai">Trading off dependencies, plan dates and the sprint goal, explained in plain language.</td><td><span class="p p1">Ph 2 · P1</span></td></tr>
-        <tr><td class="idc">DP-5</td><td><strong>Overnight brief, with actions.</strong> The changes since last session that affect the user's plan.</td><td>Shows at most 5 of all overnight changes, ranked by plan impact. Each has inline actions: nudge (message drafted), move date, split, reassign, snooze. Nudged or snoozed items resurface until closed.</td><td class="ai">Ranking by impact on this plan, and drafting a nudge with its context.</td><td><span class="p p0">Ph 1 · P0</span></td></tr>
+        <tr><td><span class="p p0">Must-have · Phase 1</span></td><td><strong>Why the line moved.</strong> Names the items behind the gap and the cause of each.</td><td>For a sprint &gt;10% above ideal, names up to 3 items and tags each: added scope, stalled, blocked, or under-estimated. Quotes and links the source. ≥70% cause accuracy in pilot review.</td><td class="ai">The cause is usually written in a work note or comment, not stored in a field.</td></tr>
+        <tr><td><span class="p p0">Must-have · Phase 1</span></td><td><strong>Overnight brief, with actions.</strong> The changes since last session that affect the user's plan.</td><td>Shows at most 5 of all overnight changes, ranked by plan impact. Each has inline actions: nudge (message drafted), move date, split, reassign, snooze. Nudged or snoozed items resurface until closed.</td><td class="ai">Ranking by impact on this plan, and drafting a nudge with its context.</td></tr>
+        <tr><td><span class="p p1">Next · Phase 2</span></td><td><strong>Unlinked blockers.</strong> Finds records outside the board that block a sprint item but were never linked.</td><td>Proposes a link when an open incident, change or approval shares a CMDB service with a sprint item and their text matches. Shows both records and the reason. Never links without user confirmation.</td><td class="ai">Matching two records by meaning and shared service, not by an explicit reference.</td></tr>
+        <tr><td><span class="p p1">Next · Phase 2</span></td><td><strong>Sprint forecast.</strong> A likely landing range for the sprint.</td><td>Daily range (e.g. 31–34 of 38 points) from ≥3 sprints of team snapshot history. Names the 2 items driving the risk. Hidden when history is insufficient.</td><td class="ai">Learned from this team's cycle time by item type, item age and estimate error.</td></tr>
+        <tr><td><span class="p p1">Next · Phase 2</span></td><td><strong>Rescue options.</strong> Ways to recover when the forecast falls short.</td><td>Offers 2–3 options. Each states what moves, which items depend on it, and the impact on the plan milestone. Nothing changes until the user picks one.</td><td class="ai">Trading off dependencies, plan dates and the sprint goal, explained in plain language.</td></tr>
       </tbody>
     </table></div>
 
     <h3><span class="gt b">02</span>Stage-aware views</h3>
     <div class="tw"><table>
-      <thead><tr><th>ID</th><th>Requirement</th><th>Acceptance criteria</th><th>Why AI</th><th>Phase</th></tr></thead>
+      <thead><tr><th>Priority</th><th>Requirement</th><th>Acceptance criteria</th><th>Why AI</th></tr></thead>
       <tbody>
-        <tr><td class="idc">SV-1</td><td><strong>Stage detection.</strong> Classifies each board as Plan, Execute, Schedule or Review.</td><td>Re-evaluated daily and on sprint events. Uses the day-one signals in §04; after 3 sprints, tunes to the team. Stage and the signals behind it shown on hover.</td><td class="ai">Rules on day one, labelled as such; becomes a per-team classifier once usage builds.</td><td><span class="p p0">Ph 1 · P0</span></td></tr>
-        <tr><td class="idc">SV-2</td><td><strong>Recommended view, with the reason.</strong></td><td>On open, suggests the stage's view with a one-line reason ("14 of 22 stories have no estimate"). One-click override, remembered per user per stage. Override rate logged.</td><td class="ai">Explaining a stage call in terms of the board's own data.</td><td><span class="p p0">Ph 1 · P0</span></td></tr>
-        <tr><td class="idc">SV-3</td><td><strong>Set up for the job.</strong> The suggested view arrives configured.</td><td>Kanban lanes from the team's most-used states; List shows points and owner in Plan; Gantt shows dependencies and critical path in Schedule. Settings panel unchanged and always available.</td><td class="ai">Inferring lanes and columns from how the team actually moves work.</td><td><span class="p p0">Ph 1 · P0</span></td></tr>
-        <tr><td class="idc">SV-4</td><td><strong>Describe it, don't configure it.</strong> A sentence becomes a view or a starter board.</td><td>Produces a filtered, grouped, sorted view, or a new board with stages and a first view. Shows the settings it applied before saving. Respects ACLs.</td><td class="ai">Natural language to view configuration.</td><td><span class="p p1">Ph 2 · P1</span></td></tr>
-        <tr><td class="idc">SV-5</td><td><strong>Team playbook.</strong> Team-level view defaults per stage.</td><td>After ≥3 sprints, proposes the view most team members keep for each stage. Applies only when the team lead approves. New members inherit it.</td><td class="ai">Learning the team's pattern from individual choices.</td><td><span class="p p1">Ph 2 · P1</span></td></tr>
+        <tr><td><span class="p p0">Must-have · Phase 1</span></td><td><strong>Stage detection.</strong> Classifies each board as Plan, Execute, Schedule or Review.</td><td>Re-evaluated daily and on sprint events. Uses the day-one signals in §04; after 3 sprints, tunes to the team. Stage and the signals behind it shown on hover.</td><td class="ai">Rules on day one, labelled as such; becomes a per-team classifier once usage builds.</td></tr>
+        <tr><td><span class="p p0">Must-have · Phase 1</span></td><td><strong>Recommended view, with the reason.</strong></td><td>On open, suggests the stage's view with a one-line reason ("14 of 22 stories have no estimate"). One-click override, remembered per user per stage. Override rate logged.</td><td class="ai">Explaining a stage call in terms of the board's own data.</td></tr>
+        <tr><td><span class="p p0">Must-have · Phase 1</span></td><td><strong>Set up for the job.</strong> The suggested view arrives configured.</td><td>Kanban lanes from the team's most-used states; List shows points and owner in Plan; Gantt shows dependencies and critical path in Schedule. Settings panel unchanged and always available.</td><td class="ai">Inferring lanes and columns from how the team actually moves work.</td></tr>
+        <tr><td><span class="p p1">Next · Phase 2</span></td><td><strong>Describe it, don't configure it.</strong> A sentence becomes a view or a starter board.</td><td>Produces a filtered, grouped, sorted view, or a new board with stages and a first view. Shows the settings it applied before saving. Respects ACLs.</td><td class="ai">Natural language to view configuration.</td></tr>
+        <tr><td><span class="p p1">Next · Phase 2</span></td><td><strong>Team playbook.</strong> Team-level view defaults per stage.</td><td>After ≥3 sprints, proposes the view most team members keep for each stage. Applies only when the team lead approves. New members inherit it.</td><td class="ai">Learning the team's pattern from individual choices.</td></tr>
       </tbody>
     </table></div>
-    <p style="font-size:13px;color:var(--md)">Phase column reads phase · priority. If capacity allows only one requirement, it is <strong>DP-1</strong>: it is the claim users can check, and nothing else in the Pulse is believed if it is wrong.</p>
+    <p style="font-size:13px;color:var(--md)"><strong>Must-have</strong> = P0, ships in Phase 1. <strong>Next</strong> = P1, ships in Phase 2. If capacity allows only one requirement, it is <strong>Why the line moved</strong>: it is the claim users can check, and nothing else in the Pulse is believed if it is wrong.</p>
   </section>
 
   <!-- AI PRINCIPLES -->
@@ -231,7 +231,7 @@ td.ai{color:var(--mt);font-size:13px}
         <tr><td>Every claim shows its source</td><td>Each Pulse item links the note, record or history it came from. Users can mark it wrong.</td></tr>
         <tr><td>Suggest, never act alone</td><td>No status change, link, reassignment or view lock happens without a user's click.</td></tr>
         <tr><td>Respect existing access</td><td>Two tiers. Everyone sees the impact ("blocked by an open incident, sprint ends Thursday"), derived server-side with no record data. The record and link show only to roles that already have access.</td></tr>
-        <tr><td>Fall back honestly</td><td>If DP-1 cause accuracy drops below 70%, the Pulse shows the dashboard chart and says it can't explain this sprint yet.</td></tr>
+        <tr><td>Fall back honestly</td><td>If "why the line moved" accuracy drops below 70%, the Pulse shows the dashboard chart and says it can't explain this sprint yet.</td></tr>
       </tbody>
     </table></div>
   </section>
@@ -244,10 +244,10 @@ td.ai{color:var(--mt);font-size:13px}
       <thead><tr><th>Item</th><th>Status</th><th>Why</th></tr></thead>
       <tbody>
         <tr><td>Assignment fairness / distribution signals</td><td><span class="p p0">CUT</span></td><td>HR-adjacent governance risk on a platform that also runs HR. Not core to either gap.</td></tr>
-        <tr><td>Admin view-usage reporting</td><td><span class="p p0">CUT</span></td><td>Helps admins, not the user in the moment. SV-5 uses the same data for the user.</td></tr>
+        <tr><td>Admin view-usage reporting</td><td><span class="p p0">CUT</span></td><td>Helps admins, not the user in the moment. Team playbook uses the same data for the user.</td></tr>
         <tr><td>Role-aware views, AI status reports, autonomous agents</td><td><span class="p p0">CUT</span></td><td>Need setup before first value, or a level of trust not yet earned.</td></tr>
         <tr><td>Slack / Teams delivery of the Pulse</td><td><span class="p p1">LATER</span></td><td>Prove the content in-app first; a weak first impression in chat is hard to recover.</td></tr>
-        <tr><td>Conversational "ask the Pulse"</td><td><span class="p p1">LATER</span></td><td>Per-query inference cost. Ship the pre-computed briefing; SV-4 tests natural-language demand on views first.</td></tr>
+        <tr><td>Conversational "ask the Pulse"</td><td><span class="p p1">LATER</span></td><td>Per-query inference cost. Ship the pre-computed briefing; "Describe it, don't configure it" tests natural-language demand on views first.</td></tr>
         <tr><td>Team-level Pulse for managers</td><td><span class="p p1">LATER</span></td><td>Needs role-hierarchy resolution at scale. Individual Pulse first.</td></tr>
       </tbody>
     </table></div>
@@ -272,8 +272,8 @@ td.ai{color:var(--mt);font-size:13px}
     <div class="tw"><table>
       <thead><tr><th>Step</th><th>What happens</th><th>Time</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Opens the board. SV-1 detects Plan; SV-2 opens List: "14 of 22 stories have no estimate."</td><td class="idc">0s</td></tr>
-        <tr><td>2</td><td>Points and owner columns are already on (SV-3). She estimates and assigns.</td><td class="idc">—</td></tr>
+        <tr><td>1</td><td>Opens the board. CWM detects the Plan stage and opens List: "14 of 22 stories have no estimate."</td><td class="idc">0s</td></tr>
+        <tr><td>2</td><td>Points and owner columns are already on. She estimates and assigns.</td><td class="idc">—</td></tr>
         <tr><td>3</td><td>She edits a release date. Stage moves to Schedule; CWM suggests Gantt with dependencies on.</td><td class="idc">—</td></tr>
         <tr><td>4</td><td>Settings panel never opened.</td><td class="idc">—</td></tr>
       </tbody>
@@ -288,8 +288,8 @@ td.ai{color:var(--mt);font-size:13px}
       <thead><tr><th>Type</th><th>Metric</th><th>Target</th></tr></thead>
       <tbody>
         <tr><td>Gap 01 · success</td><td>Open to first action on a Pulse item</td><td>&lt; 90 seconds (today ~15 minutes)</td></tr>
-        <tr><td>Gap 02 · success</td><td>Sessions where the recommended view is kept</td><td>&gt; 65%. Override above one third means the stage model is wrong; SV-2 is pulled and SV-3 ships alone</td></tr>
-        <tr><td>Kill signal · trust</td><td>Pulse items marked wrong; DP-1 cause accuracy</td><td>&lt; 10% marked wrong; accuracy &gt; 70%. Below that, fall back to the chart</td></tr>
+        <tr><td>Gap 02 · success</td><td>Sessions where the recommended view is kept</td><td>&gt; 65%. Override above one third means the stage model is wrong; the recommended view is pulled and only "set up for the job" ships</td></tr>
+        <tr><td>Kill signal · trust</td><td>Pulse items marked wrong; "why the line moved" accuracy</td><td>&lt; 10% marked wrong; accuracy &gt; 70%. Below that, fall back to the chart</td></tr>
         <tr><td>Kill signal · loop</td><td>Pulse items acted on inside CWM</td><td>&gt; 35%. Lower means we built a newsletter</td></tr>
       </tbody>
     </table></div>
@@ -320,10 +320,10 @@ td.ai{color:var(--mt);font-size:13px}
     <div class="tw"><table>
       <thead><tr><th>Dependency</th><th>Owner</th><th>Status / impact</th></tr></thead>
       <tbody>
-        <tr><td>Daily snapshot table and job</td><td>CWM Agile</td><td><strong>Delivered</strong> with the sprint dashboard. Feeds DP-1, DP-3, SV-1.</td></tr>
-        <tr><td>Now Assist skills for text reasoning and matching</td><td>Platform AI</td><td>Required for DP-1, DP-2, DP-4, SV-4.</td></tr>
-        <tr><td>CMDB service mapping on incidents and stories</td><td>Platform / customer data</td><td>DP-2 quality depends on it; falls back to text matching where mapping is missing.</td></tr>
-        <tr><td>View telemetry per board and stage</td><td>CWM Core</td><td>Needed for SV-2 override tracking and SV-5.</td></tr>
+        <tr><td>Daily snapshot table and job</td><td>CWM Agile</td><td><strong>Delivered</strong> with the sprint dashboard. Feeds why the line moved, sprint forecast and stage detection.</td></tr>
+        <tr><td>Now Assist skills for text reasoning and matching</td><td>Platform AI</td><td>Required for why the line moved, unlinked blockers, rescue options and "describe it".</td></tr>
+        <tr><td>CMDB service mapping on incidents and stories</td><td>Platform / customer data</td><td>Unlinked-blocker quality depends on it; falls back to text matching where mapping is missing.</td></tr>
+        <tr><td>View telemetry per board and stage</td><td>CWM Core</td><td>Needed for override tracking on the recommended view, and for team playbook.</td></tr>
         <tr><td>Connected Work at 500+ items</td><td>CWM Core</td><td>Current default of 100 limits cross-board reasoning.</td></tr>
       </tbody>
     </table></div>
@@ -338,8 +338,8 @@ td.ai{color:var(--mt);font-size:13px}
       <tbody>
         <tr><td>Cause tags are wrong and users stop trusting the Pulse</td><td>Medium</td><td>Source shown on every item; mark-as-wrong feedback; 70% accuracy gate before Phase 2.</td></tr>
         <tr><td>Unlinked-blocker suggestions are noisy</td><td>Medium</td><td>Require shared CMDB service plus text match; propose, never auto-link; track accept rate.</td></tr>
-        <tr><td>Stage detection guesses wrong and users fight it</td><td>Medium</td><td>Suggestion only, one-click override, remembered. Override above one third pulls SV-2.</td></tr>
-        <tr><td>Two-tier disclosure rejected by platform governance</td><td>Medium</td><td>Validate with a platform architect before DP-1 build. Fallback: reason only over records the user can see.</td></tr>
+        <tr><td>Stage detection guesses wrong and users fight it</td><td>Medium</td><td>Suggestion only, one-click override, remembered. Override above one third pulls the recommended view.</td></tr>
+        <tr><td>Two-tier disclosure rejected by platform governance</td><td>Medium</td><td>Validate with a platform architect before building "why the line moved". Fallback: reason only over records the user can see.</td></tr>
         <tr><td>The Pulse reads as a second dashboard</td><td>Low</td><td>It replaces the personal dashboard and links to board charts instead of redrawing them.</td></tr>
         <tr><td>Scope drifts back toward configuration for enterprise asks</td><td>High</td><td>The ten-minute, no-settings-panel test gates each phase.</td></tr>
       </tbody>
@@ -351,11 +351,11 @@ td.ai{color:var(--mt);font-size:13px}
     <div class="kick">13 — Open questions</div>
     <h2>Still to resolve.</h2>
     <ol>
-      <li><strong>DP-1 approach:</strong> an LLM reading notes per item, or a lighter classifier trained on tagged history? The LLM handles messy text better; the classifier is cheaper and easier to audit.</li>
+      <li><strong>"Why the line moved" approach:</strong> an LLM reading notes per item, or a lighter classifier trained on tagged history? The LLM handles messy text better; the classifier is cheaper and easier to audit.</li>
       <li><strong>Stage overlap:</strong> when a sprint is running and dates are being edited, which wins, Execute or Schedule? Current rule: Schedule for that session only.</li>
       <li><strong>Empty Pulse:</strong> send a daily briefing even when nothing needs attention? Always-on builds habit; empty briefings erode trust.</li>
       <li><strong>Scale:</strong> performance at 2,000+ connected items per user is unvalidated. Load test before Phase 2.</li>
-      <li><strong>Moat:</strong> if Atlassian's Teamwork Graph ingests ServiceNow data via marketplace apps, how much of DP-2's advantage remains?</li>
+      <li><strong>Moat:</strong> if Atlassian's Teamwork Graph ingests ServiceNow data via marketplace apps, how much of the unlinked-blocker advantage remains?</li>
     </ol>
   </section>
 
@@ -373,7 +373,7 @@ td.ai{color:var(--mt);font-size:13px}
         <tr><td>Secondary research</td><td>Context-switching cost (HBR 2022; Cornell/Qatalog); ClickUp reviews on "which view do I use for what"; competitive review of Monday.com, Asana, Atlassian, Linear, Notion.</td></tr>
       </tbody>
     </table></div>
-    <div class="call cost"><span class="lbl">Not yet validated</span>No structured interviews yet. Plan: two weeks, no engineering time, 8–10 scrum masters and delivery leads at three CWM customers plus three teams that left for another tool. <strong>Gap 01:</strong> what did you do in the ten minutes after seeing the burndown off track, and where did you find the reason? <strong>Gap 02:</strong> which view do you plan in and which do you run standup in; when did you last change columns or lanes? <strong>Falsification:</strong> if leads say the dashboard is enough, or that they already use one view per stage without thinking, the investment moves to EAP integration and only SV-3 ships.</div>
+    <div class="call cost"><span class="lbl">Not yet validated</span>No structured interviews yet. Plan: two weeks, no engineering time, 8–10 scrum masters and delivery leads at three CWM customers plus three teams that left for another tool. <strong>Gap 01:</strong> what did you do in the ten minutes after seeing the burndown off track, and where did you find the reason? <strong>Gap 02:</strong> which view do you plan in and which do you run standup in; when did you last change columns or lanes? <strong>Falsification:</strong> if leads say the dashboard is enough, or that they already use one view per stage without thinking, the investment moves to EAP integration and only "set up for the job" ships.</div>
   </section>
 
   <div class="endcap"><a href="daily-pulse.html">← Back to the case study</a></div>

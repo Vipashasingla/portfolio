@@ -190,7 +190,7 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
 .fts{margin-top:30px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.fts .ft{grid-column:span 2}.fts .ft:nth-child(n+4){grid-column:span 3}
 .ft{background:var(--ink2);border:1px solid var(--ln);border-radius:12px;padding:20px 20px 16px;display:flex;flex-direction:column;box-shadow:var(--sh)}
 .ft .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.ft .id{font:700 11px/1 var(--mo);color:var(--ac)}
+.pri{font:700 10px/1 var(--mo);letter-spacing:.04em;padding:5px 10px;border-radius:999px;white-space:nowrap;display:inline-block}.pri.p0{background:#FEE2E2;color:#B91C1C}.pri.p1{background:#FEF3C7;color:#B45309}.legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--md)}
 .ft.v .id{color:var(--am)}
 .ft .ph{font:400 10px/1 var(--mo);letter-spacing:.06em;text-transform:uppercase;color:var(--md);border:1px solid var(--ln);border-radius:999px;padding:4px 9px}
 .ft .ph.p1{color:var(--em);border-color:var(--em)}
@@ -389,6 +389,7 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
   <div class="rv"><span class="ey">Act 04 — Fixing Gap 01</span></div>
   <h2 class="rv" data-d="1">Daily Pulse: the sprint, explained.</h2>
   <p class="ld rv" data-d="2">A morning briefing in My Work. Five capabilities, each answering a question the dashboard raises and can't answer.</p>
+  <div class="legend rv" data-d="2"><span class="pri p0">Must-have · Phase 1</span><span class="pri p1">Next · Phase 2</span><span>Must-haves ship first. The rest follows once they prove accurate.</span></div>
 
   <div class="mock rv" data-d="2">
     <div class="mh2"><span>Daily Pulse · Tuesday</span><b>Sprint 14 · at risk</b></div>
@@ -401,34 +402,34 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
 
   <div class="fts rv" data-d="3">
     <div class="ft">
-      <div class="top"><span class="id">DP-1</span><span class="ph p1">Phase 1</span></div>
+      <div class="top"><span class="pri p0">Must-have · Phase 1</span></div>
       <h3>Why the line moved</h3>
       <div class="d">Names the items behind the gap and the cause of each: added scope, stalled, blocked, or under-estimated.</div>
       <div class="ai"><b>AI</b>Reads work notes, comments and linked records to find a cause no field records.</div>
     </div>
     <div class="ft">
-      <div class="top"><span class="id">DP-2</span><span class="ph">Phase 2</span></div>
+      <div class="top"><span class="pri p0">Must-have · Phase 1</span></div>
+      <h3>Overnight brief, with actions</h3>
+      <div class="q">"40 changes overnight. 3 affect your plan. The blocking approval cleared at 11 pm: pull Billing export in?"</div>
+      <div class="ai"><b>AI</b>Ranks changes by impact on your plan and drafts the nudge with its context. You act on the card, then it follows up until it's closed.</div>
+    </div>
+    <div class="ft">
+      <div class="top"><span class="pri p1">Next · Phase 2</span></div>
       <h3>Unlinked blockers</h3>
       <div class="q">"An open incident sits on the Payments service. Your story changes that service. Nobody linked them."</div>
       <div class="ai"><b>AI</b>Matches records across ITSM, PPM and EAP by meaning and shared CMDB service. Proposes the link; you confirm.</div>
     </div>
     <div class="ft">
-      <div class="top"><span class="id">DP-3</span><span class="ph">Phase 2</span></div>
+      <div class="top"><span class="pri p1">Next · Phase 2</span></div>
       <h3>Sprint forecast</h3>
       <div class="q">"Likely landing: 31–34 of 38 points. Two stories are at 3× your usual time for that type."</div>
       <div class="ai"><b>AI</b>Learns this team's cycle times and estimate error from the dashboard's daily snapshots. Shows a range, not a promise.</div>
     </div>
     <div class="ft">
-      <div class="top"><span class="id">DP-4</span><span class="ph">Phase 2</span></div>
+      <div class="top"><span class="pri p1">Next · Phase 2</span></div>
       <h3>Rescue options</h3>
       <div class="q">"Option A: move two stories (5 pts), nothing depends on them, milestone safe. Option B: keep scope, milestone slips two days."</div>
       <div class="ai"><b>AI</b>Weighs dependencies, plan dates and the sprint goal, then explains the trade-off. A person picks.</div>
-    </div>
-    <div class="ft">
-      <div class="top"><span class="id">DP-5</span><span class="ph p1">Phase 1</span></div>
-      <h3>Overnight brief, with actions</h3>
-      <div class="q">"40 changes overnight. 3 affect your plan. The blocking approval cleared at 11 pm: pull Billing export in?"</div>
-      <div class="ai"><b>AI</b>Ranks changes by impact on your plan and drafts the nudge with its context. You act on the card, then it follows up until it's closed.</div>
     </div>
   </div>
 </div>
@@ -451,31 +452,31 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
 
   <div class="fts rv" data-d="3">
     <div class="ft v">
-      <div class="top"><span class="id">SV-1</span><span class="ph p1">Phase 1</span></div>
+      <div class="top"><span class="pri p0">Must-have · Phase 1</span></div>
       <h3>Stage detection</h3>
       <div class="d">Works out which of the four stages each board is in, and shows the signals it used.</div>
       <div class="ai"><b>AI</b>Classifies stage from activity, not a setting. Starts from rules; learns each team's rhythm as usage builds.</div>
     </div>
     <div class="ft v">
-      <div class="top"><span class="id">SV-2</span><span class="ph p1">Phase 1</span></div>
+      <div class="top"><span class="pri p0">Must-have · Phase 1</span></div>
       <h3>Recommended view, with the reason</h3>
       <div class="q">"You're planning: 14 of 22 stories have no estimate. Opening List, sorted by priority."</div>
       <div class="ai"><b>AI</b>Explains the pick in one line. One click to change; your choice is remembered for that stage.</div>
     </div>
     <div class="ft v">
-      <div class="top"><span class="id">SV-3</span><span class="ph p1">Phase 1</span></div>
+      <div class="top"><span class="pri p0">Must-have · Phase 1</span></div>
       <h3>Set up for the job</h3>
       <div class="d">The view arrives configured: Kanban lanes that match how the team really moves work, List with points and owner columns, Gantt with dependencies on.</div>
       <div class="ai"><b>AI</b>Infers lanes and columns from the team's history. The settings panel stays, but stops being the entry fee.</div>
     </div>
     <div class="ft v">
-      <div class="top"><span class="id">SV-4</span><span class="ph">Phase 2</span></div>
+      <div class="top"><span class="pri p1">Next · Phase 2</span></div>
       <h3>Describe it, don't configure it</h3>
       <div class="q">"Show what's blocking the release, grouped by owner." Or, for a new board: "6-week campaign, 4 people."</div>
       <div class="ai"><b>AI</b>Turns a sentence into a filtered, grouped view or a starter board. You see the settings it chose before saving.</div>
     </div>
     <div class="ft v">
-      <div class="top"><span class="id">SV-5</span><span class="ph">Phase 2</span></div>
+      <div class="top"><span class="pri p1">Next · Phase 2</span></div>
       <h3>Team playbook</h3>
       <div class="q">"Your team plans in Gantt, not List: 4 sprints running. Make that the team default?"</div>
       <div class="ai"><b>AI</b>Learns which view each stage really uses on this team. The lead approves; new members start with it.</div>
@@ -546,26 +547,26 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
   <p class="ld rv" data-d="2">Phase 1 explains what already happened, which a user can check. Phase 2 predicts and reaches across modules, so it waits until Phase 1 has earned trust.</p>
 
   <div class="rg rv" data-d="3">
-    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--md)">Shipped</div><div class="rtm">last ~6 months</div><h3>Measurement</h3>
+    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--em)">Shipped</div><div class="rtm">last ~6 months</div><h3>Measurement</h3>
       <div class="ri">Daily sprint snapshot</div>
       <div class="ri">Burndown vs ideal</div>
       <div class="ri">Scope change, progress by status</div>
     </div>
-    <div class="card rc"><div class="rt" style="background:var(--ac)">Phase 1</div><div class="rtm">~1 quarter</div><h3>Explain &amp; set up</h3>
-      <div class="ri">DP-1 Why the line moved</div>
-      <div class="ri">DP-5 Overnight brief, with actions</div>
-      <div class="ri">SV-1 Stage detection</div>
-      <div class="ri">SV-2 Recommended view</div>
-      <div class="ri">SV-3 Set up for the job</div>
+    <div class="card rc"><div class="rt" style="background:#B91C1C">Must-have · Phase 1</div><div class="rtm">~1 quarter</div><h3>Explain &amp; set up</h3>
+      <div class="ri">Why the line moved</div>
+      <div class="ri">Overnight brief, with actions</div>
+      <div class="ri">Stage detection</div>
+      <div class="ri">Recommended view</div>
+      <div class="ri">Set up for the job</div>
     </div>
-    <div class="card rc"><div class="rt" style="background:var(--pr)">Phase 2</div><div class="rtm">~1–2 quarters</div><h3>Predict &amp; learn</h3>
-      <div class="ri">DP-2 Unlinked blockers</div>
-      <div class="ri">DP-3 Sprint forecast</div>
-      <div class="ri">DP-4 Rescue options</div>
-      <div class="ri">SV-4 Describe it</div>
-      <div class="ri">SV-5 Team playbook</div>
+    <div class="card rc"><div class="rt" style="background:#B45309">Next · Phase 2</div><div class="rtm">~1–2 quarters</div><h3>Predict &amp; learn</h3>
+      <div class="ri">Unlinked blockers</div>
+      <div class="ri">Sprint forecast</div>
+      <div class="ri">Rescue options</div>
+      <div class="ri">Describe it, don't configure it</div>
+      <div class="ri">Team playbook</div>
     </div>
-    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--rd)">Cut</div><div class="rtm">out of the plan</div><h3>Not building</h3>
+    <div class="card rc" style="background:var(--ink3);box-shadow:none"><div class="rt" style="background:var(--md)">Cut</div><div class="rtm">out of the plan</div><h3>Not building</h3>
       <div class="ri">Assignment fairness signals: HR-adjacent governance risk</div>
       <div class="ri">Admin view-usage reports: help admins, not the user</div>
       <div class="ri">Role-aware views: need setup first</div>
@@ -576,7 +577,7 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
 
   <div class="note rv" data-d="3">
     <div class="nt">If only one thing ships</div>
-    <p><strong>DP-1, why the line moved.</strong> It's the claim users can check against what they already know. If it's wrong, nothing else in the Pulse will be believed. Cost: about one quarter of CWM Core and Agile capacity, held against broadening Connected Work.</p>
+    <p><strong>Why the line moved.</strong> It's the claim users can check against what they already know. If it's wrong, nothing else in the Pulse will be believed. Cost: about one quarter of CWM Core and Agile capacity, held against broadening Connected Work.</p>
   </div>
 </div>
 </section>
@@ -626,7 +627,7 @@ details.gl dt{font-weight:600;color:var(--pp)}details.gl dd{color:var(--mt)}
         <li><strong>Who:</strong> 8–10 scrum masters and delivery leads at three CWM customers, plus three teams that left for another tool. Two weeks, no engineering time.</li>
         <li><strong>Gap 01:</strong> "After seeing the burndown off track, what did you do in the next ten minutes, and where did you find the reason?"</li>
         <li><strong>Gap 02:</strong> "Which view do you plan in, and which do you run standup in? When did you last change the columns?"</li>
-        <li><strong style="color:var(--rd)">Would falsify it:</strong> leads say the dashboard is enough, or they already use one view per stage without thinking. Then the money goes to EAP integration, and only SV-3 ships.</li>
+        <li><strong style="color:var(--rd)">Would falsify it:</strong> leads say the dashboard is enough, or they already use one view per stage without thinking. Then the money goes to EAP integration, and only "Set up for the job" ships.</li>
       </ul>
     </div>
   </div>
